@@ -1,0 +1,12 @@
+:root {
+  --primary-color: #181818;
+  --secondary-color: #ffffff;
+  --accent-color: #e55e5b;
+  --tertiary-color: #546f55;
+}
+
+html {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: sans-serif;
+}
