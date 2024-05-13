@@ -3,7 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/global.css'
 
 // Importer komponenter her
-import Card from '../components/Card.astro';
+import VinylPressing from '../components/VinylPressing.astro'
+import ForsideImg from '../components/ForsideImg.astro'
 
 // Skriv javascript her
 
@@ -12,14 +13,16 @@ import Card from '../components/Card.astro';
 <Layout title="RPM Records">
     <!-- html kode skrives inde i main -->
 	<main>
-
-		<h1>RPM Records</h1>
+		<ForsideImg />
+		<VinylPressing />
+		
 		
 	</main>
 </Layout>
 
 <style>
 	main {
+		width: 100%;
 	}
 
 	h1 {}
