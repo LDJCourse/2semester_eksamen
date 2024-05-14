@@ -1,0 +1,29 @@
+---
+interface Props {
+	title: string;
+    // Change href to required
+	href?: string;
+}
+
+const { href, title } = Astro.props;
+---
+<!-- Genbrugelig link knap -->
+	<a href={href}>
+	{title}
+	</a>
+<style>
+	  a {
+        all: unset;
+        cursor: pointer;
+        background: var(--primary-color);
+        color: var(--secondary-color);
+        padding: 10px 25px;
+        box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
+        /* font-size: 12px; */
+    }
+
+    @media (min-width: 768px) {
+     
+    }
+</style>
+
