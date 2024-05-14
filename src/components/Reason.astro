@@ -1,0 +1,48 @@
+---
+interface Props {
+	title: string;
+	mainText: string;
+    subText: string;
+    svg: string;
+}
+
+const { title, mainText, subText, svg } = Astro.props;
+---
+<section class="reason_container">
+    <div class="img_container">
+        <img src={svg} alt="">
+    </div>
+    <h1>{title}</h1>
+    <p>{mainText}</p>
+    <p>{subText}</p>
+</section>
+
+<style>
+
+
+    .img_container {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+    }
+
+	
+    h1 {
+        text-transform: uppercase;
+    }
+
+    @media (min-width: 768px) {
+        .reason_container {
+            width: 30%;
+	    }
+
+        
+        img {
+            height: 150px;
+            width: 150px;
+        }
+    }
+</style>
+
+
+<!-- Eksempel på komponent  -->
