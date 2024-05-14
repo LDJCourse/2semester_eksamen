@@ -1,0 +1,28 @@
+---
+
+---
+<div class="image_container">
+    <img src="/frontpageimg.png" alt="">
+    <img src="/frontpageimg.png" alt="">
+    <img src="/frontpageimg.png" alt="">
+</div>
+
+<style>
+	.image_container {
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+	}
+
+    img {
+        margin: 15px 0;
+    }
+
+	@media (min-width: 768px) {
+        .image_container {
+            flex-direction: row;
+        } 
+	}
+</style>
+
