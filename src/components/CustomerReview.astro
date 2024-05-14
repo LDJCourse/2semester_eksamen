@@ -1,0 +1,35 @@
+
+---
+interface Props {
+	name: string;
+	comment: string;
+}
+
+const { name, comment } = Astro.props;
+---
+<section class="reason_container">
+    <p>{comment}</p>
+    <h3>{name}</h3>
+</section>
+
+<style>
+    h3 {
+        text-transform: uppercase;
+        text-align: end;
+        font-size: 10px;
+    }
+
+    @media (min-width: 768px) {
+        .reason_container {
+            width: 30%;
+	    }
+
+        
+        img {
+            height: 150px;
+            width: 150px;
+        }
+    }
+</style>
+
+
