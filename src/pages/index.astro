@@ -3,10 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/global.css'
 
 // Importer komponenter her
-import ForsideImg from '../components/ForsideImg.astro'
-import VinylPressing from '../components/VinylPressing.astro'
-import ReasonsWhy from '../components/ReasonsWhy.astro';
-import CustomerReviews from '../components/CustomerReviews.astro';
+import ForsideImg from '../components/IndexPageComponents/ForsideImg.astro';
+import VinylPressing from '../components/IndexPageComponents/VinylPressing.astro';
+import ReasonsWhy from '../components/IndexPageComponents/ReasonsWhy.astro';
+import CustomerReviews from '../components/IndexPageComponents/CustomerReviews.astro';
 
 // Skriv javascript her
 
@@ -15,10 +15,11 @@ import CustomerReviews from '../components/CustomerReviews.astro';
 <Layout title="RPM Records">
     <!-- html kode skrives inde i main -->
 	<main>
-		<ForsideImg />
+	<!-- Indsæt komponenter her  -->
+		<ForsideImg /> 
 		<VinylPressing />
 		<ReasonsWhy />
-		<CustomerReviews />
+		<CustomerReviews /> 
 	</main>
 </Layout>
 
@@ -27,5 +28,4 @@ import CustomerReviews from '../components/CustomerReviews.astro';
 		width: 100%;
 	}
 
-	h1 {}
 </style>
