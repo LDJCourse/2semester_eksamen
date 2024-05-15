@@ -1,29 +1,28 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css'
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
 
 // Importer komponenter her
-import AudioSpecsIntro from '../components/AudioSpecsPageComponents/AudioSpecsIntro.astro';
-import VinylMasteringTips from '../components/AudioSpecsPageComponents/VinylMasteringTips.astro';
-import ImageSection from '../components/AudioSpecsPageComponents/ImageSection.astro';
-import VinylInfoSection from '../components/AudioSpecsPageComponents/VinylInfoSection.astro';
+import AudioSpecsIntro from "../components/AudioSpecsPageComponents/AudioSpecsIntro.astro";
+import VinylMasteringTips from "../components/AudioSpecsPageComponents/VinylMasteringTips.astro";
+import ImageSection from "../components/AudioSpecsPageComponents/ImageSection.astro";
+import VinylInfoSection from "../components/AudioSpecsPageComponents/VinylInfoSection.astro";
 
 // Skriv javascript her
-
 ---
 
 <Layout title="Audio specifications">
-    <!-- html kode skrives inde i main -->
-	<main>
-		<!-- Indsæt komponenter her  -->
-		<AudioSpecsIntro />
-		<VinylMasteringTips />
-		<ImageSection />
-		<VinylInfoSection />
-	</main>
+  <!-- html kode skrives inde i main -->
+  <main>
+    <!-- Indsæt komponenter her  -->
+    <AudioSpecsIntro />
+    <VinylMasteringTips />
+    <ImageSection />
+    <VinylInfoSection />
+  </main>
 </Layout>
 
 <style>
-	main {
-	}
+  main {
+  }
 </style>

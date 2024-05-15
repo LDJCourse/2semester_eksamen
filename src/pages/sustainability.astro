@@ -1,24 +1,84 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css'
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
 
 // Importer komponenter her
-
+import IntroImg from "../components/SustainabilityPageComponents/IntroImg.astro";
+import EcofriendlyMats from "../components/SustainabilityPageComponents/EcofriendlyMats.astro";
+import ProductionSection from "../components/SustainabilityPageComponents/ProductionSection.astro";
+import ValueChainSection from "../components/SustainabilityPageComponents/ValueChainSection.astro";
 
 // Skriv javascript her
-
 ---
 
 <Layout title="Sustainability">
-    <!-- html kode skrives inde i main -->
-	<main>
-		<h1>Sustainability</h1>
-		<!-- Indsæt komponenter her  -->
-		
-	</main>
+  <!-- html kode skrives inde i main -->
+  <main>
+    <!-- Indsæt komponenter her  -->
+    <IntroImg />
+    <EcofriendlyMats />
+    <ProductionSection />
+    <ValueChainSection />
+    <div class="container">
+      <section class="text_section">
+        <h1>Ecofriendly material selection</h1>
+        <ul>
+          <li>FSC certified paper products</li>
+          <li>Wood-free and recycled paper</li>
+          <li>Plant-based vegan ink</li>
+          <li>Biodegradable stickers</li>
+          <li>Bio-vinyl and recycled plastic</li>
+          <li>Sugar cane bio film.</li>
+          <li>Paper adhesive tape</li>
+        </ul>
+      </section>
+      <section class="text_section">
+        <h1>Sustainable production workflow</h1>
+        <ul>
+          <li>Automatization and high efficiency</li>
+          <li>Smart, innovative technology</li>
+          <li>Recycling and minimum waste</li>
+          <li>Energy conservation</li>
+          <li>Experienced workforce</li>
+          <li>Continuous Learning</li>
+        </ul>
+      </section>
+      <section class="text_section">
+        <h1>Traits of responsible value chain</h1>
+        <ul>
+          <li>Safe management of hazardous waste</li>
+          <li>Green energy infrastructure</li>
+          <li>Zero emission logistics</li>
+          <li>Continuous investment in sustainability</li>
+          <li>Carbon neutral operation</li>
+        </ul>
+      </section>
+    </div>
+  </main>
 </Layout>
 
 <style>
-	main {
-	}
+  main {
+  }
+
+  .container {
+    background: var(--tertiary-color);
+    padding: 20px;
+  }
+
+  .text_section {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 1);
+    padding: 20px;
+    margin: 40px 0;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
 </style>

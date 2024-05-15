@@ -1,0 +1,39 @@
+---
+
+---
+
+<div>
+  <p>SUSTAINABLE RECORD PRESSING</p>
+</div>
+<style>
+  .link-card {
+  }
+
+  /* Der er sat width på her så word-break kan skille sætningen ad i tre ord på tre linjer */
+  /* word-break virker kun hvis sætningen er har længere width end den container den er i */
+  p {
+    width: 150px;
+    line-height: 1.5;
+    word-break: normal;
+    padding: 0 20px;
+  }
+
+  div {
+    background-image: url("/sustiablerecordpressing.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  @media (min-width: 768px) {
+    div {
+      height: 50vh;
+    }
+  }
+</style>
+
+<!-- Eksempel på komponent  -->
