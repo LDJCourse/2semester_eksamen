@@ -1,0 +1,83 @@
+---
+
+---
+
+<div class="container">
+  <section class="text_section">
+    <h1>CIRCULAR SUSTAINABLE PRODUCTION</h1>
+    <p>
+      Our circular production model follows three core principles: minimum
+      waste, efficiency and quality. Therefore, we recycle 98% of plastic waste
+      in production. Our water management system diminishes wastage and
+      environmental impacts while re-using water continuously in record
+      production.
+    </p>
+    <p>
+      The modern automatic thermo-molding press is energy efficient and faster
+      compared to old presses. That allows consistent quality from the first to
+      the last record, using less energy in less time.
+    </p>
+    <p>
+      We value skills and experience on the manufacturing floor. Thus, our
+      production team is mindful of sustainability and operates at 95% success
+      rate, minimum waste or re-work.
+    </p>
+  </section>
+  <div class="img_container">
+    <img src="/frontpageimg.png" alt="" />
+  </div>
+</div>
+<style>
+  .container {
+    background: var(--tertiary-color);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .text_section {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 20px;
+    border: 4px solid black;
+    border-radius: 5px;
+  }
+
+  .img_container {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    margin-top: 50px;
+  }
+
+  img {
+    max-width: 100%;
+    position: absolute;
+    top: 10%;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .text_section {
+      width: 30%;
+    }
+
+    .img_container {
+      width: 30%;
+      height: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      position: absolute;
+      bottom: 50%;
+      top: auto;
+      object-fit: cover;
+      /* scale: 1.2; */
+    }
+  }
+</style>
