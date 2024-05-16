@@ -1,0 +1,72 @@
+---
+
+---
+
+<div class="container">
+  <div class="img_container">
+    <img src="/frontpageimg.png" alt="" />
+  </div>
+  <section class="text_section">
+    <h1>OUR STORY</h1>
+    <p>
+      We started as a dubplate studio in 2015, cutting limited runs for
+      independent artists. By 2018 we acquired our first vinyl press and RPM
+      Records was born. Since our founding, we have aspired to produce premium
+      quality records faster and more accessible.This way helping independent
+      artists and labels to showcase their best work on vinyl.
+    </p>
+    <p>
+      As new generation producers, we approach ecological degradation with
+      earnest concern. Thus, paving the way for sustainable production and
+      longevity of a clean physical format. All while maintaining some of the
+      highest quality standards in the industry.
+    </p>
+  </section>
+</div>
+<style>
+  .container {
+    padding: 20px;
+    background: var(--tertiary-color);
+  }
+
+  .img_container {
+    width: 100%;
+    height: 200px;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    max-width: 70%;
+    border: 3px solid black;
+    box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 1);
+  }
+
+  .text_section {
+    padding: 20px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    line-height: 1.8;
+    border: 3px solid black;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      display: flex;
+      justify-content: space-around;
+    }
+    .text_section {
+      width: 30%;
+      line-height: 2;
+    }
+
+    p {
+      margin: 30px 0;
+    }
+    .img_container {
+      width: auto;
+      height: 400px;
+    }
+  }
+</style>

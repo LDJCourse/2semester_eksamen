@@ -1,0 +1,91 @@
+---
+
+---
+
+<div class="container">
+  <section class="text_section">
+    <h1>OUR STORY</h1>
+    <p>
+      RPM Records is devoted to the enduring vinyl tradition, modern technology
+      and deep understanding of production methods. We uphold top quality
+      standards on the manufacturing floor and throughout the supply chain. Here
+      is how we do it:
+    </p>
+
+    <ul>
+      <li>EXCEPTIONAL QUALITY CONTROL:</li>
+      <p>
+        Our rigorous standards guarantee defect-free records, meticulously
+        inspecting each one by hand to eliminate skipping, warping, and noise.
+      </p>
+      <li>HIGH QUALITY STANDARDS:</li>
+      <p>
+        Utilizing modern technology, we deliver visually and sonically superior
+        records with low noise levels, perfect centering, and consistent
+        quality, preserving the rich, natural sound of vinyl's heyday.
+      </p>
+      <li>PARTNER NETWORK:</li>
+      <p>
+        Leveraging over 30 years of experience and cutting-edge equipment from
+        our professional mastering partners, we ensure the highest sound quality
+        across all music genres.
+      </p>
+      <li>CUSTOMER SERVICE:</li>
+      <p>
+        Our friendly and knowledgeable staff provides prompt assistance,
+        dedicated to helping you create the optimal product.
+      </p>
+    </ul>
+  </section>
+  <div class="img_container">
+    <img src="/frontpageimg.png" alt="" />
+  </div>
+</div>
+<style>
+  .container {
+    margin: 20px 0;
+    padding: 20px;
+    background: var(--tertiary-color);
+  }
+
+  .img_container {
+    width: 100%;
+    height: 400px;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    max-width: 70%;
+    border: 3px solid black;
+    box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 1);
+  }
+
+  .text_section {
+    padding: 20px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    line-height: 1.8;
+    border: 3px solid black;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      display: flex;
+      justify-content: space-around;
+    }
+    .text_section {
+      width: 30%;
+      line-height: 2;
+    }
+
+    p {
+      margin: 30px 0;
+    }
+    .img_container {
+      width: auto;
+      height: auto;
+    }
+  }
+</style>

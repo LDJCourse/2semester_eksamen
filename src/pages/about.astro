@@ -1,23 +1,29 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css'
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
 
 // Importer komponenter her
-
-
+import AboutIntroSection from "../components/AboutPageComponents/AboutIntroSection.astro";
+import OurStorySection from "../components/AboutPageComponents/OurStorySection.astro";
+import QualityManagementSection from "../components/AboutPageComponents/QualityManagementSection.astro";
+import RecentProjectsSection from "../components/AboutPageComponents/RecentProjectsSection.astro";
+import ClientsSection from "../components/AboutPageComponents/ClientsSections.astro";
 // Skriv javascript her
-
 ---
 
 <Layout title="About">
-    <!-- html kode skrives inde i main -->
-	<main>
-		<h1>About</h1>
-		<!-- Indsæt komponenter her  -->
-	</main>
+  <!-- html kode skrives inde i main -->
+  <main>
+    <!-- Indsæt komponenter her  -->
+    <AboutIntroSection />
+    <OurStorySection />
+    <ClientsSection />
+    <QualityManagementSection />
+    <RecentProjectsSection />
+  </main>
 </Layout>
 
 <style>
-	main {
-	}
+  main {
+  }
 </style>
