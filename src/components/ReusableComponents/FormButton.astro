@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<button>
+  {title}
+</button>
+<style>
+  button {
+    all: unset;
+    width: 86%;
+    text-align: center;
+    cursor: pointer;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 10px 25px;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.75);
+    /* font-size: 12px; */
+    margin: 50px 20px;
+  }
+
+  @media (min-width: 768px) {
+    button {
+      width: 30%;
+    }
+  }
+</style>

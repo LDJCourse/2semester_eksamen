@@ -1,0 +1,43 @@
+---
+
+---
+
+<section class="container">
+  <h1>Message:</h1>
+  <textarea name="" id="" placeholder="Please let us know more about your order"
+  ></textarea>
+</section>
+<style>
+  .container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 100%;
+  }
+
+  textarea {
+    height: 100px;
+    background-color: black;
+    color: var(--secondary-color);
+    border: 1px solid #686868;
+    resize: none;
+  }
+
+  textarea:focus {
+    outline: none;
+  }
+
+  textarea::placeholder {
+    color: var(--secondary-color);
+  }
+
+  @media (min-width: 768px) {
+    textarea {
+      width: 50%;
+      height: 150px;
+    }
+  }
+</style>
+
+<!-- Eksempel på komponent  -->

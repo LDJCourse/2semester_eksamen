@@ -1,0 +1,98 @@
+---
+interface Props {
+  title: string;
+  question: string;
+  value1: string;
+  value2: string;
+  value3?: string;
+  value4?: string;
+}
+
+const { title, question, value1, value2, value3, value4 } = Astro.props;
+// const val3 = document.querySelector("#value3");
+// const val4 = document.querySelector("#value3");
+
+let isEmpty = false;
+
+if (value3 !== undefined) {
+  isEmpty = true;
+}
+
+if (value4 !== undefined) {
+  isEmpty = true;
+}
+---
+
+<section class="container">
+  <h1>{title}</h1>
+  <p>{question}</p>
+  <div class="input_container">
+    <div>
+      <input type="radio" name={value1} value={value1} />
+      <span>{value1}</span>
+    </div>
+    <div>
+      <input type="radio" name={value2} value={value2} />
+      <span>{value2}</span>
+    </div>
+    {
+      isEmpty ? (
+        <div>
+          <input type="radio" name={value3} value={value3} />
+          <span>{value3}</span>
+        </div>
+      ) : (
+        ""
+      )
+    }
+    {
+      isEmpty ? (
+        <div>
+          <input type="radio" name={value4} value={value4} />
+          <span>{value4}</span>
+        </div>
+      ) : (
+        ""
+      )
+    }
+  </div>
+</section>
+<style>
+  .container {
+    padding: 20px;
+  }
+  .input_container div {
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+  }
+
+  input {
+    all: unset;
+    width: 20px;
+    height: 20px;
+    background-color: #555; /* Gray background */
+    border-radius: 15%;
+    position: relative;
+    outline: none;
+    margin: 10px 10px 10px 0;
+    vertical-align: middle;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 2px #999; /* Light gray border */
+  }
+
+  /* Create the inner circle for checked state */
+  input:checked::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #fff; /* White inner circle */
+    border-radius: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
+
+<!-- Eksempel på komponent  -->

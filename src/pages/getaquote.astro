@@ -1,51 +1,109 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css'
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
 
 // Importer komponenter her
-import PickAFormat from '../components/GetAQuotePageComponents/PickAFormat.astro'
-import PickQuantity from '../components/GetAQuotePageComponents/PickQuantity.astro'
+import PickAFormat from "../components/GetAQuotePageComponents/PickAFormat.astro";
+import PickQuantity from "../components/GetAQuotePageComponents/PickQuantity.astro";
+import ProductChoice from "../components/GetAQuotePageComponents/ProductChoice.astro";
+import InputField from "../components/GetAQuotePageComponents/InputField.astro";
+import TextareaField from "../components/GetAQuotePageComponents/TextareaField.astro";
+import FormButton from "../components/ReusableComponents/FormButton.astro";
 
 // Skriv javascript her
-
 ---
 
 <Layout title="Get a quote">
-    <!-- html kode skrives inde i main -->
-	<main>
-		<h1>VINYL PRESSING PRICES</h1>
-	  <!-- Indsæt komponenter her  -->
-    <PickAFormat />	
-    <PickQuantity />
-	</main>
-  
-    <script>
-        // Bruger 'DOMContentLoaded',
-        document.addEventListener('DOMContentLoaded', function() {
-          const formats = document.querySelectorAll('.format');
-    
-        // Funktion til at der kommer farve på format når der bliver trykket på det
-          formats.forEach(format => {
-            // Tilføjer click funktion med add eventlistener
-            format.addEventListener('click', function() {
-            // Kører et for loop på alle elementer, vha. forEach()
-            // Fungere som en form for reset
-            // Først fjernes klassen active, der gør at formaterne får farve, fra alle elementer 
-              formats.forEach(f => f.classList.remove('active'));
-              // Derefter tilføjes klassen active, til det formate der blev trykket på
-              format.classList.add('active');
-            });
-          });
+  <!-- html kode skrives inde i main -->
+  <main class="container">
+    <!-- Indsæt komponenter her  -->
+    <div>
+      <PickAFormat />
+      <div class="product_choice_container">
+        <PickQuantity />
+
+        <ProductChoice
+          title="Record weight:"
+          question="How heave would you like your records?"
+          value1="140 gram"
+          value2="180 gram"
+        />
+        <ProductChoice
+          title="Vinyl Color::"
+          question="Would you like your records in black or color?"
+          value1="Black"
+          value2="Color"
+        />
+        <ProductChoice
+          title="Artwork:"
+          question="What are your plans for artwork printing?"
+          value1="Full color"
+          value2="Monochrome / Black & White"
+          value3="Gatefold"
+          value4="Other"
+        />
+        <ProductChoice
+          title="Delivery Time:"
+          question="Are you in a hurry? We may be able to help you out."
+          value1="Regular - Records are ready within 2 1/2 months"
+          value2="Express - Records are ready within 45 days"
+        />
+      </div>
+      <TextareaField />
+
+      <h1>Contact Information</h1>
+
+      <div class="input_container">
+        <InputField placeholder="First name" label="First name" />
+        <InputField placeholder="Last name" label="Last name" />
+        <InputField placeholder="Company name" label="Company name" />
+        <InputField placeholder="Your email" label="Email" />
+        <FormButton title="Submit order" />
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Bruger 'DOMContentLoaded' til at køre funktion når alle elementer er indlæst
+    document.addEventListener("DOMContentLoaded", function () {
+      const formats = document.querySelectorAll(".format");
+
+      // Funktion til at der kommer farve på format når der bliver trykket på det
+      formats.forEach((format) => {
+        // Tilføjer click funktion med add eventlistener
+        format.addEventListener("click", function () {
+          // Kører et for loop på alle elementer, vha. forEach()
+          // Fungere som en form for reset
+          // Først fjernes klassen active, der gør at formaterne får farve, fra alle elementer
+          formats.forEach((f) => f.classList.remove("active"));
+          // Derefter tilføjes klassen active, til det formate der blev trykket på
+          format.classList.add("active");
         });
-    </script>
+      });
+    });
+  </script>
 </Layout>
 
 <style>
-	h1 {
-		text-align: center;
-		font-size: 20px;
-		margin: 50px;
-	}
+  h1 {
+    margin: 20px;
+  }
 
-
+  @media (min-width: 768px) {
+    .container {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+    .input_container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 150px;
+    }
+    .product_choice_container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px 150px;
+    }
+  }
 </style>
