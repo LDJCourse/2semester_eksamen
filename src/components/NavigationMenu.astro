@@ -1,0 +1,125 @@
+---
+
+---
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="/" class="logo">RPM RECORDS</a>
+    <ul class="nav-links">
+      <li class="nav-item">
+        <a href="#">SERVICES <span class="dropdown-icon">&#9660;</span></a>
+        <ul class="dropdown">
+          <li><a href="/audiospecs">AUDIO</a></li>
+          <li><a href="#">ARTWORK</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="#">VINYL</a></li>
+      <li class="nav-item">
+        <a href="/sustainability">SUSTAINABILITY</a>
+      </li>
+      <li class="nav-item"><a href="/about">ABOUT</a></li>
+    </ul>
+    <a href="/getaquote">
+      <button class="quote-button">Get a Quote</button>
+    </a>
+  </div>
+</nav>
+<style>
+  .navbar {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .navbar {
+      display: block;
+      background-color: rgb(12, 12, 12);
+      padding: 10px 80px;
+    }
+
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: #fa8072;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-right: 40px; /* Adjust the spacing as needed */
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex: 1;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 40px; /* Adjust the spacing between nav items */
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-item a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+
+    .nav-item a:hover,
+    .nav-item a:focus {
+      color: #fa8072;
+    }
+
+    .dropdown {
+      padding: 0;
+      display: none;
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgb(12, 12, 12);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .dropdown li {
+      width: 150px;
+    }
+
+    .dropdown li a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+    }
+
+    .dropdown li a:hover {
+      background-color: #333;
+    }
+
+    .nav-item:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown-icon {
+      margin-left: 5px;
+    }
+
+    .quote-button {
+      background-color: var(--accent-color);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-left: auto; /* Pushes the button to the far right */
+    }
+
+    .quote-button:hover,
+    .quote-button:focus {
+      background-color: #f04333;
+    }
+  }
+</style>
+
+<!-- Eksempel på komponent  -->

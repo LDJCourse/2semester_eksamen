@@ -8,12 +8,14 @@ import OurStorySection from "../components/AboutPageComponents/OurStorySection.a
 import QualityManagementSection from "../components/AboutPageComponents/QualityManagementSection.astro";
 import RecentProjectsSection from "../components/AboutPageComponents/RecentProjectsSection.astro";
 import ClientsSection from "../components/AboutPageComponents/ClientsSections.astro";
+import NavigationMenu from "../components/NavigationMenu.astro";
 // Skriv javascript her
 ---
 
 <Layout title="About">
   <!-- html kode skrives inde i main -->
   <main>
+    <NavigationMenu />
     <!-- Indsæt komponenter her  -->
     <AboutIntroSection />
     <OurStorySection />

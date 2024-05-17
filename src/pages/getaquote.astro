@@ -6,15 +6,17 @@ import "../styles/global.css";
 import PickAFormat from "../components/GetAQuotePageComponents/PickAFormat.astro";
 import PickQuantity from "../components/GetAQuotePageComponents/PickQuantity.astro";
 import ProductChoice from "../components/GetAQuotePageComponents/ProductChoice.astro";
-import InputField from "../components/GetAQuotePageComponents/InputField.astro";
 import TextareaField from "../components/GetAQuotePageComponents/TextareaField.astro";
-import FormButton from "../components/ReusableComponents/FormButton.astro";
+import FormSection from "../components/GetAQuotePageComponents/FormSection.astro";
+import NavigationMenu from "../components/NavigationMenu.astro";
 
 // Skriv javascript her
 ---
 
 <Layout title="Get a quote">
   <!-- html kode skrives inde i main -->
+  <NavigationMenu />
+
   <main class="container">
     <!-- Indsæt komponenter her  -->
     <div>
@@ -29,7 +31,7 @@ import FormButton from "../components/ReusableComponents/FormButton.astro";
           value2="180 gram"
         />
         <ProductChoice
-          title="Vinyl Color::"
+          title="Vinyl Color:"
           question="Would you like your records in black or color?"
           value1="Black"
           value2="Color"
@@ -52,14 +54,7 @@ import FormButton from "../components/ReusableComponents/FormButton.astro";
       <TextareaField />
 
       <h1>Contact Information</h1>
-
-      <div class="input_container">
-        <InputField placeholder="First name" label="First name" />
-        <InputField placeholder="Last name" label="Last name" />
-        <InputField placeholder="Company name" label="Company name" />
-        <InputField placeholder="Your email" label="Email" />
-        <FormButton title="Submit order" />
-      </div>
+      <FormSection />
     </div>
   </main>
 
@@ -88,7 +83,6 @@ import FormButton from "../components/ReusableComponents/FormButton.astro";
   h1 {
     margin: 20px;
   }
-
   @media (min-width: 768px) {
     .container {
       display: flex;

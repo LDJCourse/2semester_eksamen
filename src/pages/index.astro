@@ -1,31 +1,31 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css'
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
 
 // Importer komponenter her
-import ForsideImg from '../components/IndexPageComponents/ForsideImg.astro';
-import VinylPressing from '../components/IndexPageComponents/VinylPressing.astro';
-import ReasonsWhy from '../components/IndexPageComponents/ReasonsWhy.astro';
-import CustomerReviews from '../components/IndexPageComponents/CustomerReviews.astro';
+import ForsideImg from "../components/IndexPageComponents/ForsideImg.astro";
+import VinylPressing from "../components/IndexPageComponents/VinylPressing.astro";
+import ReasonsWhy from "../components/IndexPageComponents/ReasonsWhy.astro";
+import CustomerReviews from "../components/IndexPageComponents/CustomerReviews.astro";
+import NavigationMenu from "../components/NavigationMenu.astro";
 
 // Skriv javascript her
-
 ---
 
 <Layout title="RPM Records">
-    <!-- html kode skrives inde i main -->
-	<main>
-	<!-- Indsæt komponenter her  -->
-		<ForsideImg /> 
-		<VinylPressing />
-		<ReasonsWhy />
-		<CustomerReviews /> 
-	</main>
+  <!-- html kode skrives inde i main -->
+  <main>
+    <NavigationMenu />
+    <!-- Indsæt komponenter her  -->
+    <ForsideImg />
+    <VinylPressing />
+    <ReasonsWhy />
+    <CustomerReviews />
+  </main>
 </Layout>
 
 <style>
-	main {
-		width: 100%;
-	}
-
+  main {
+    width: 100%;
+  }
 </style>
