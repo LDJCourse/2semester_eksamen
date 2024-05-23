@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+
+// Importer komponenter her
+import NavigationMenu from "../components/NavigationMenu.astro";
+
+// Skriv javascript her
+---
+
+<Layout title="RPM Records">
+  <!-- html kode skrives inde i main -->
+  <main>
+    <NavigationMenu />
+    <!-- Indsæt komponenter her  -->
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+  }
+</style>
