@@ -1,0 +1,26 @@
+---
+import "/src/styles/global.css";
+const { imgNavn, altTekst, pTekst, idNumber } = Astro.props;
+---
+
+<div class="sidebar_tekst_wrapper" id={idNumber}>
+  <img src={imgNavn} alt={altTekst} class="sidebar_ikoner" />
+  <p class="vinyl_sidebar">{pTekst}</p>
+</div>
+
+<style>
+  .sidebar_tekst_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .vinyl_sidebar {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+
+  .sidebar_ikoner {
+    height: 24px;
+    width: 24px;
+  }
+</style>

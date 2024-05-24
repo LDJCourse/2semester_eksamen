@@ -5,26 +5,7 @@ import "/src/styles/global.css";
 <div class="sidebarcontainer">
   <h2>Find a Topic:</h2>
   <div class="sidebarlink_wrapper">
-    <div class="sidebar_tekst_wrapper">
-      <img src="/vinyl_ikon.png" alt="" class="sidebar_ikoner" />
-      <p class="vinyl_sidebar">How Vinyls Work</p>
-    </div>
-    <div class="sidebar_tekst_wrapper">
-      <img src="/vinyl_ikon.png" alt="" class="sidebar_ikoner" />
-      <p class="vinyl_sidebar">Producing For Vinyl</p>
-    </div>
-    <div class="sidebar_tekst_wrapper">
-      <img src="/vinyl_ikon.png" alt="" class="sidebar_ikoner" />
-      <p class="vinyl_sidebar">Audio Master & Cue Sheet</p>
-    </div>
-    <div class="sidebar_tekst_wrapper">
-      <img src="/vinyl_ikon.png" alt="" class="sidebar_ikoner" />
-      <p class="vinyl_sidebar">Mastertemplates & Stampers</p>
-    </div>
-    <div class="sidebar_tekst_wrapper">
-      <img src="/vinyl_ikon.png" alt="" class="sidebar_ikoner" />
-      <p class="vinyl_sidebar">Singles & Albums</p>
-    </div>
+    <slot />
   </div>
 </div>
 
@@ -41,6 +22,10 @@ import "/src/styles/global.css";
     display: flex;
     align-items: center;
     gap: 16px;
+  }
+
+  .sidebar_tekst_wrapper:hover {
+    cursor: pointer;
   }
 
   .sidebarcontainer h2 {

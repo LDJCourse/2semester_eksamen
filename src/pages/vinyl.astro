@@ -5,6 +5,8 @@ import "../styles/global.css";
 // Importer komponenter her
 import NavigationMenu from "../components/NavigationMenu.astro";
 import SideBar from "../components/VinylPageComponents/SideBar.astro";
+import SectionVinyl from "../components/VinylPageComponents/Section.astro";
+import SidebarLink from "../components/VinylPageComponents/SidebarLink.astro";
 
 // Skriv javascript her
 ---
@@ -15,28 +17,37 @@ import SideBar from "../components/VinylPageComponents/SideBar.astro";
     <NavigationMenu />
     <!-- Indsæt komponenter her  -->
     <div class="vinylcontainer">
-      <SideBar />
+      <SideBar>
+        <SidebarLink id="sectionOne" pTekst="How Vinyls Work" imgNavn="/vinyl_ikon.png" altTekst="" />
+        <SidebarLink id="sectionTwo" pTekst="Producing For Vinyl" imgNavn="/vinyl_ikon.png" altTekst="" />
+        <SidebarLink id="sectionThree" pTekst="Audio Master & Cue Sheet" imgNavn="/vinyl_ikon.png" altTekst="" />
+        <SidebarLink id="sectionFour" pTekst="Mastertemplates & Stampers" imgNavn="/vinyl_ikon.png" altTekst="" />
+        <SidebarLink id="sectionFive" pTekst="Singles & Albums" imgNavn="/vinyl_ikon.png" altTekst="" />
+      </SideBar>
       <div class="section_container">
         <div class="sectionTop">
           <img src="/vinyl_top_img.jpg" alt="" />
           <h1>VINYL PRESSING GUIDE</h1>
           <p>Learn the essentials about making a vinyl release in under 5 minutes. Here you will find everything you need to get started, from the terminology to must-know of the medium. All in a concise and easy to understand format. Let’s get started!</p>
         </div>
-        <div id="section1">
-          <div class="section_title_flex">
-            <img src="/howvinylworks_icon.png" alt="" class="icon_vinyl" />
-            <h2>How Vinyl Works</h2>
-          </div>
+        <SectionVinyl header="How Vinyl Works" imgtext="/howvinylworks_icon.png" id="vinylSection1" onclick="">
           <p>Imagine typing on a A4 size sheet. It’s just a matter of time before you run out of space. Large or heavyweight font and headlines use the sheet quicker. And you have to mind the empty space to prevent letters, lines and paragraphs from tumbling. Thus, a good balance between text, font and space is a key to delightful reading experience.</p>
           <p>It is similar with vinyl, where in recording, a heated stylus vibrates to the music and curves a disc. When you play a record, grooves force a needle to vibrate in the same way, recreating the recording. What there is on a disc is only a pattern of vibrations.</p>
           <h3>Loud Music, Weak Signals</h3>
           <p>While gentle sounds tremble, loud and powerful sounds quake. Limited by the diameter, a disc can contain plenty of trembling and only some quakes. This is like typing on a sheet of paper, where more text requires a smaller font. On vinyl, more or louder music results in a weaker signal. That is why 25 minutes of heavy music on a record side will not be able to vibrate to its full potential. Reminiscing a style that attempts to hit hard but falls short.</p>
-          <p>To delve deeper into the intricate relationships between album length, mastering techniques, song sequencing, and overall sound quality, we encourage you to explore this article on our blog.</p>
-        </div>
-        <div id="section2"></div>
-        <div id="section3"></div>
-        <div id="section4"></div>
-        <div id="section5"></div>
+          <p>To delve deeper into the intricate relationships between album length, mastering techniques, song sequencing, and overall sound quality, we encourage you to explore this article on our blog.</p>
+        </SectionVinyl>
+
+        <SectionVinyl header="Producing For Vinyl" imgtext="/producingforvinyl_ikon.png" id="vinylSection2">
+          <p>As you may know by now, every inch counts on a record. To save space, shorten intros, outros and cut other insignificant passages. You will not only save space but time for your listener. It might be tempting to put as many songs on an album as possible. But leaving trivial ones behind will allow best quality for the most important tunes.</p>
+          <p>Every disc sounds best at the start and degrades in quality towards the center. Thus, start each side with high intensity and finish with ease. It will allow high definition sound for your major tunes, and will diminish distortion by the end.</p>
+          <h3>Frequency Optimization Tips</h3>
+          <p>Human ear is insensitive to stereo bass and there is little musical value above 15khz. A record won’t respond well to the range above 15khz or stereo below 200hz either.</p>
+          <p>Mix instruments within the vinyl frequency range from the start. And try to achieve rounded and balanced sound with levels and EQ rather than limiting. The album will sound strong and more pleasing on all formats.</p>
+        </SectionVinyl>
+        <SectionVinyl header="Audio Master & Cue Sheets" imgtext="/audiomaster_ikon.png" id="vinylSection3" />
+        <SectionVinyl header="Masterplates & Stampers" imgtext="masterplates_ikon.png" id="vinylSection4" />
+        <SectionVinyl header="" imgtext="" id="vinylSection5" />
       </div>
     </div>
   </main>
@@ -66,10 +77,6 @@ import SideBar from "../components/VinylPageComponents/SideBar.astro";
     margin-left: 25%;
   }
 
-  .section_container {
-    padding: 80px;
-  }
-
   .section_title_flex {
     display: flex;
     gap: 24px;
@@ -80,3 +87,36 @@ import SideBar from "../components/VinylPageComponents/SideBar.astro";
     width: 76px;
   }
 </style>
+
+<script>
+  window.addEventListener("load", sidenVises);
+  function sidenVises() {
+    console.log("sidenVises");
+  }
+
+  // Const
+  const sectionOne = document.querySelector("#vinylSection1");
+  const sectionTwo = document.querySelector("#vinylSection2");
+  const sectionThree = document.querySelector("#vinylSection3");
+  const sectionFour = document.querySelector("#vinylSection4");
+  const sidebarOne = document.querySelector("#sidebarOne");
+
+  // ScrollIntoView function
+
+  sidebarOne.addEventListener("click", scrollOne, false);
+
+  function scrollOne(e) {
+    sectionOne.scrollIntoView({ behavior: "smooth" });
+  }
+
+  //sectionOne.addEventListener("click", sectionScroller);
+
+  //function sectionScroller(sectionId) {
+  //console.log("Scroller");
+  //var section = document.getElementById(sectionId);
+
+  // if (section) {
+  //  section.scrollIntoView({ behavior: "smooth" });
+  // }
+  //}
+</script>
