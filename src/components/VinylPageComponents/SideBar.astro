@@ -1,0 +1,59 @@
+---
+import "/src/styles/global.css";
+---
+
+<div class="sidebarcontainer">
+  <h2>Find a Topic:</h2>
+  <div class="sidebarlink_wrapper">
+    <div class="sidebar_tekst_wrapper">
+      <img src="/vinyl_ikon.png" alt="" class="sidebar_ikoner" />
+      <p class="vinyl_sidebar">How Vinyls Work</p>
+    </div>
+    <div class="sidebar_tekst_wrapper">
+      <img src="/vinyl_ikon.png" alt="" class="sidebar_ikoner" />
+      <p class="vinyl_sidebar">Producing For Vinyl</p>
+    </div>
+    <div class="sidebar_tekst_wrapper">
+      <img src="/vinyl_ikon.png" alt="" class="sidebar_ikoner" />
+      <p class="vinyl_sidebar">Audio Master & Cue Sheet</p>
+    </div>
+    <div class="sidebar_tekst_wrapper">
+      <img src="/vinyl_ikon.png" alt="" class="sidebar_ikoner" />
+      <p class="vinyl_sidebar">Mastertemplates & Stampers</p>
+    </div>
+    <div class="sidebar_tekst_wrapper">
+      <img src="/vinyl_ikon.png" alt="" class="sidebar_ikoner" />
+      <p class="vinyl_sidebar">Singles & Albums</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .sidebarcontainer {
+    position: fixed;
+    background-color: #fff;
+    grid-column: 1 / 2;
+    height: 100%;
+    padding: 40px;
+  }
+
+  .sidebar_tekst_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .sidebarcontainer h2 {
+    color: var(--primary-color);
+  }
+
+  .vinyl_sidebar {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+
+  .sidebar_ikoner {
+    height: 24px;
+    width: 24px;
+  }
+</style>

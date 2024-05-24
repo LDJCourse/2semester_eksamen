@@ -4,6 +4,7 @@ import "../styles/global.css";
 
 // Importer komponenter her
 import NavigationMenu from "../components/NavigationMenu.astro";
+import SideBar from "../components/VinylPageComponents/SideBar.astro";
 
 // Skriv javascript her
 ---
@@ -13,11 +14,69 @@ import NavigationMenu from "../components/NavigationMenu.astro";
   <main>
     <NavigationMenu />
     <!-- Indsæt komponenter her  -->
+    <div class="vinylcontainer">
+      <SideBar />
+      <div class="section_container">
+        <div class="sectionTop">
+          <img src="/vinyl_top_img.jpg" alt="" />
+          <h1>VINYL PRESSING GUIDE</h1>
+          <p>Learn the essentials about making a vinyl release in under 5 minutes. Here you will find everything you need to get started, from the terminology to must-know of the medium. All in a concise and easy to understand format. Let’s get started!</p>
+        </div>
+        <div id="section1">
+          <div class="section_title_flex">
+            <img src="/howvinylworks_icon.png" alt="" class="icon_vinyl" />
+            <h2>How Vinyl Works</h2>
+          </div>
+          <p>Imagine typing on a A4 size sheet. It’s just a matter of time before you run out of space. Large or heavyweight font and headlines use the sheet quicker. And you have to mind the empty space to prevent letters, lines and paragraphs from tumbling. Thus, a good balance between text, font and space is a key to delightful reading experience.</p>
+          <p>It is similar with vinyl, where in recording, a heated stylus vibrates to the music and curves a disc. When you play a record, grooves force a needle to vibrate in the same way, recreating the recording. What there is on a disc is only a pattern of vibrations.</p>
+          <h3>Loud Music, Weak Signals</h3>
+          <p>While gentle sounds tremble, loud and powerful sounds quake. Limited by the diameter, a disc can contain plenty of trembling and only some quakes. This is like typing on a sheet of paper, where more text requires a smaller font. On vinyl, more or louder music results in a weaker signal. That is why 25 minutes of heavy music on a record side will not be able to vibrate to its full potential. Reminiscing a style that attempts to hit hard but falls short.</p>
+          <p>To delve deeper into the intricate relationships between album length, mastering techniques, song sequencing, and overall sound quality, we encourage you to explore this article on our blog.</p>
+        </div>
+        <div id="section2"></div>
+        <div id="section3"></div>
+        <div id="section4"></div>
+        <div id="section5"></div>
+      </div>
+    </div>
   </main>
 </Layout>
 
 <style>
   main {
     width: 100%;
+  }
+
+  .vinylcontainer {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .sidebarcontainer {
+    position: fixed;
+    background-color: #fff;
+    grid-column: 1 / 2;
+    height: 100%;
+    padding: 40px;
+  }
+
+  .section_container {
+    max-width: 880px;
+    padding: 80px;
+    margin-left: 25%;
+  }
+
+  .section_container {
+    padding: 80px;
+  }
+
+  .section_title_flex {
+    display: flex;
+    gap: 24px;
+  }
+
+  .icon_vinyl {
+    height: 75px;
+    width: 76px;
   }
 </style>
