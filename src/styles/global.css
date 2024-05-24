@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --primary-color: #181818;
+  --primary-color: #161616;
   --secondary-color: #ffffff;
   --accent-color: #FD8C8A;
   --tertiary-color: #546f55;
@@ -60,7 +60,7 @@ h3 {
   font-size: 28px;
 }
 
-p, a {
+p, a, .links {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
