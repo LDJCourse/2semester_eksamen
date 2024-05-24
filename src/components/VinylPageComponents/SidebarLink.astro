@@ -1,14 +1,17 @@
 ---
 import "/src/styles/global.css";
-const { imgNavn, altTekst, pTekst, idNumber } = Astro.props;
+const { imgNavn, altTekst, pTekst, idNumber, linkId } = Astro.props;
 ---
 
-<div class="sidebar_tekst_wrapper" id={idNumber}>
+<div class="sidebar_tekst_wrapper" id={linkId}>
   <img src={imgNavn} alt={altTekst} class="sidebar_ikoner" />
-  <p class="vinyl_sidebar">{pTekst}</p>
+  <p class="vinyl_sidebar"><a href="javascript:void(0)">{pTekst}</a></p>
 </div>
 
 <style>
+  a {
+    color: var(--primary-color);
+  }
   .sidebar_tekst_wrapper {
     display: flex;
     align-items: center;
@@ -22,5 +25,9 @@ const { imgNavn, altTekst, pTekst, idNumber } = Astro.props;
   .sidebar_ikoner {
     height: 24px;
     width: 24px;
+  }
+
+  .sidebar_tekst_wrapper:hover {
+    cursor: pointer;
   }
 </style>
