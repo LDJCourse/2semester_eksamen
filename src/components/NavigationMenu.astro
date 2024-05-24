@@ -1,5 +1,5 @@
 ---
-
+import "../styles/global.css";
 ---
 
 <nav class="navbar">
@@ -19,9 +19,12 @@
       </li>
       <li class="nav-item"><a href="/about">ABOUT</a></li>
     </ul>
-    <a href="/getaquote">
-      <button class="quote-button">Get a Quote</button>
-    </a>
+    <div class="button_wrapper" id="buttonId">
+      <a href="/getaquote">
+        <button class="quote-button">Get a Quote</button>
+      </a>
+      <img src="/arrow-right.svg" alt="" class="button-icon hide" id="arrow_icon" />
+    </div>
   </div>
 </nav>
 <style>
@@ -69,6 +72,10 @@
     }
 
     .nav-item a {
+      font-family: "Fjalla One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 20px;
       color: #fff;
       text-decoration: none;
       padding: 5px 10px;
@@ -113,20 +120,66 @@
       margin-left: 5px;
     }
 
-    .quote-button {
+    .hide {
+      display: none;
+      transition: 0.3s ease-in-out all;
+    }
+
+    /*.quote-button {
       background-color: var(--accent-color);
       color: #fff;
+      font-family: "Fjalla One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.5rem;
       border: none;
       padding: 10px 20px;
       cursor: pointer;
-      margin-left: auto; /* Pushes the button to the far right */
-    }
-
+      margin-left: auto; /* Pushes the button to the far right */ /*    }*/
+    /*
     .quote-button:hover,
     .quote-button:focus {
       background-color: #f04333;
+    }*/
+
+    .button_wrapper {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--accent-color);
+      color: #fff;
+      font-family: "Fjalla One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.5rem;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-left: auto;
+      transition: 0.3s ease-in-out all;
+    }
+
+    .button_wrapper:hover,
+    .button_wrapper:focus {
+      background-color: #f04333;
+      transition: 0.3s ease-in-out all;
     }
   }
 </style>
 
 <!-- Eksempel på komponent  -->
+
+<script>
+  const buttonArrow = document.querySelector("#buttonId");
+  const arrowIcon = document.querySelector("#arrow_icon");
+  buttonArrow.addEventListener("mouseover", hideRemove);
+
+  function hideRemove() {
+    arrowIcon.classList.remove("hide");
+    buttonArrow.addEventListener("mouseout", addRemove);
+  }
+  function addRemove() {
+    arrowIcon.classList.add("hide");
+  }
+</script>

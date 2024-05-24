@@ -18,13 +18,14 @@ import SidebarLink from "../components/VinylPageComponents/SidebarLink.astro";
     <NavigationMenu />
     <!-- Indsæt komponenter her  -->
     <div class="vinylcontainer">
-      <SideBar>
-        <SidebarLink linkId="linkOne" pTekst="How Vinyls Work" imgNavn="/vinyl_ikon.png" altTekst="" />
+      <SideBar class="">
+        <SidebarLink linkId="linkOne" pTekst="How Vinyls Work" imgNavn="/vinyl_ikon.png" altTekst="" class="sideLink" />
         <SidebarLink linkId="linkTwo" pTekst="Producing For Vinyl" imgNavn="/vinyl_ikon.png" altTekst="" />
         <SidebarLink linkId="linkThree" pTekst="Audio Master & Cue Sheet" imgNavn="/vinyl_ikon.png" altTekst="" />
         <SidebarLink linkId="linkFour" pTekst="Mastertemplates & Stampers" imgNavn="/vinyl_ikon.png" altTekst="" />
         <SidebarLink linkId="linkFive" pTekst="Singles & Albums" imgNavn="/vinyl_ikon.png" altTekst="" />
       </SideBar>
+
       <div class="section_container">
         <div class="sectionTop">
           <img src="/vinylpressingbanner.jpg" alt="" class="vinylHeaderImg" />
@@ -92,6 +93,10 @@ import SidebarLink from "../components/VinylPageComponents/SidebarLink.astro";
   .icon_vinyl {
     height: 75px;
     width: 76px;
+  }
+
+  .sideLink:active {
+    font-weight: 700;
   }
 </style>
 

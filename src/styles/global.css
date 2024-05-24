@@ -3,7 +3,7 @@
 :root {
   --primary-color: #181818;
   --secondary-color: #ffffff;
-  --accent-color: #e55e5b;
+  --accent-color: #FD8C8A;
   --tertiary-color: #546f55;
 
   /* Font størrelser */
@@ -27,6 +27,8 @@ html {
   background-color: var(--primary-color);
   color: var(--secondary-color);
   font-family: sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px;
 }
 
 img {
@@ -39,7 +41,7 @@ h1, h2, h3, h4, p, a {
   color: var(--secondary-color);
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, button {
   font-family: "Fjalla One", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -69,3 +71,22 @@ p {
   line-height: 1.6;
 }
 
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 1.5rem;
+}
+
+.button-icon {
+  height: 32px;
+  width: 32px;
+}
+
+.button_wrapper {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
