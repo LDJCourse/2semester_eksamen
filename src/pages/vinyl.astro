@@ -7,6 +7,7 @@ import NavigationMenu from "../components/NavigationMenu.astro";
 import SideBar from "../components/VinylPageComponents/SideBar.astro";
 import SectionVinyl from "../components/VinylPageComponents/Section.astro";
 import SidebarLink from "../components/VinylPageComponents/SidebarLink.astro";
+import Footer from "../components/Footer.astro";
 
 // Skriv javascript her
 // Hej
@@ -47,6 +48,7 @@ import SidebarLink from "../components/VinylPageComponents/SidebarLink.astro";
           <p>Human ear is insensitive to stereo bass and there is little musical value above 15khz. A record won’t respond well to the range above 15khz or stereo below 200hz either.</p>
           <p>Mix instruments within the vinyl frequency range from the start. And try to achieve rounded and balanced sound with levels and EQ rather than limiting. The album will sound strong and more pleasing on all formats.</p>
         </SectionVinyl>
+        <img src="/vinyl_parallax1.jpg" alt="" class="parallaxLayer" />
         <SectionVinyl header="Audio Master & Cue Sheets" imgtext="/audiomaster_ikon.png" sectionId="vinylSection3">
           <p>Vinyl cue sheet is an instructional protocol that describes a project and a song layout. Start and end time determine the visual gaps on a record. Take your time and make sure the cue sheet is flawless to avoid unexpected results.</p>
           <p>While a digital master can work on vinyl, it may also sound terrible. You should always aim for a decent vinyl master. But in case that is not available, let the pressing plant know in the cue sheet.</p>
@@ -60,6 +62,7 @@ import SidebarLink from "../components/VinylPageComponents/SidebarLink.astro";
       </div>
     </div>
   </main>
+  <Footer />
 </Layout>
 
 <style>
@@ -97,6 +100,14 @@ import SidebarLink from "../components/VinylPageComponents/SidebarLink.astro";
 
   .sideLink:active {
     font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    .section_container {
+      max-width: 1080px;
+      padding: 16px;
+      margin-left: 0;
+    }
   }
 </style>
 
