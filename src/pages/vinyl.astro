@@ -26,7 +26,7 @@ import SidebarLink from "../components/VinylPageComponents/SidebarLink.astro";
       </SideBar>
       <div class="section_container">
         <div class="sectionTop">
-          <img src="/vinyl_top_img.jpg" alt="" />
+          <img src="/vinyl_top_img.jpg" alt="" class="vinylHeaderImg" />
           <h1>VINYL PRESSING GUIDE</h1>
           <p>Learn the essentials about making a vinyl release in under 5 minutes. Here you will find everything you need to get started, from the terminology to must-know of the medium. All in a concise and easy to understand format. Let’s get started!</p>
         </div>
@@ -55,7 +55,6 @@ import SidebarLink from "../components/VinylPageComponents/SidebarLink.astro";
           <p>Sonic qualities of the master plate will remain on the stamper and further in production. Altering audio properties later is a fast rewind to mastering and start over. That is timely and expensive.</p>
           <p>When moving from digital to analog, some detour in the tonal balance may occur. It is unavoidable, but with adequate preparation, however, it will translate fairly close. With plethora of formats to choose from, some albums may sound better on CD, cassette or streaming. And a cost-effective way to test that is a reference cut.</p>
         </SectionVinyl>
-        <SectionVinyl header="" imgtext="" id="vinylSection5" />
       </div>
     </div>
   </main>
@@ -67,22 +66,21 @@ import SidebarLink from "../components/VinylPageComponents/SidebarLink.astro";
   }
 
   .vinylcontainer {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
   }
 
   .sidebarcontainer {
     position: fixed;
     background-color: #fff;
     grid-column: 1 / 2;
-    height: 100%;
+    height: auto;
+    width: 240px;
     padding: 40px;
   }
 
   .section_container {
     max-width: 1080px;
     padding: 80px;
-    margin-left: 40%;
+    margin-left: 320px;
   }
 
   .section_title_flex {
