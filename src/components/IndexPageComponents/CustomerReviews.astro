@@ -1,52 +1,51 @@
 ---
-import CustomerReview from './CustomerReview.astro';
+import CustomerReview from "./CustomerReview.astro";
+
+const url = "https://ifcawdlucobohfnmrxmg.supabase.co/rest/v1/clients";
+const apikey = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlmY2F3ZGx1Y29ib2hmbm1yeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU5NDU3OTcsImV4cCI6MjAzMTUyMTc5N30.Tncixva_zJhjtqjW-cBPr9RFrDbPfLxGtp5c9EhnIn4`;
+
+// fetch(url, {
+//   method: "GET",
+//   headers: {
+//     apikey: apikey,
+//   },
+// })
+//   .then((res) => res.json())
+//   .then(showData);
+
+// function showData(items) {
+//   console.log(items);
+//   //   items.forEach();
+// }
+
+const res = await fetch(
+  `https://ifcawdlucobohfnmrxmg.supabase.co/rest/v1/comments?apikey=${apikey}`
+);
+const data = await res.json();
+console.log(data);
 ---
+
 <section>
-    <h1>WHAT OUR CUSTOMERS SAY?</h1>
-    <div class="customer_reviews_container">
-        <CustomerReview
-            name='-Fanney Kristjáns Snjólaugardóttir' 
-            comment=`“RPM Records printed the vinyl album Bleed'n 
-            Blend for me. All comunications were good and they were 
-            very helpful and reliable. The quality of the vinyl and 
-            the printing of the cover was exelent. I recommend them 
-            for independant artists like me”`
-            />
-        <CustomerReview
-            name='-Fanney Kristjáns Snjólaugardóttir' 
-            comment=`“RPM Records printed the vinyl album Bleed'n 
-            Blend for me. All comunications were good and they were 
-            very helpful and reliable. The quality of the vinyl and 
-            the printing of the cover was exelent. I recommend them 
-            for independant artists like me”`
-            />
-        <CustomerReview
-            name='-Fanney Kristjáns Snjólaugardóttir' 
-            comment=`“RPM Records printed the vinyl album Bleed'n 
-            Blend for me. All comunications were good and they were 
-            very helpful and reliable. The quality of the vinyl and 
-            the printing of the cover was exelent. I recommend them 
-            for independant artists like me”`
-            />
-    </div>
+  <h1>WHAT OUR CUSTOMERS SAY?</h1>
+  <div class="customer_reviews_container">
+    {data.map((d) => <CustomerReview name={d.name} comment={d.comment} />)}
+  </div>
 </section>
 <style>
-    .customer_reviews_container {
-        display: flex;
-        flex-direction: column;
-    }
+  .customer_reviews_container {
+    display: flex;
+    flex-direction: column;
+  }
 
-    h1 {
-        font-size: 20px;
-        text-align: center;
-    }
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
 
-    section {
-        padding: 20px;
-    }
+  section {
+    padding: 20px;
+  }
 
-    @media (min-width: 768px) {
-       
-    }
+  @media (min-width: 768px) {
+  }
 </style>
-
