@@ -22,6 +22,9 @@
   --padding-desktop2: 40px;
   --padding-desktop3: 32px;
 
+  /* border radius */
+  --border-radius: 2px;
+
 }
 
 html {

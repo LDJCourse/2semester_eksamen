@@ -19,7 +19,7 @@ import Footer from "../components/Footer.astro";
     <NavigationMenu />
     <!-- Indsæt komponenter her  -->
     <div class="vinylcontainer">
-      <SideBar class="">
+      <SideBar class="stickySidebar">
         <SidebarLink linkId="linkOne" pTekst="How Vinyls Work" imgNavn="/vinyl_ikon.png" altTekst="" class="sideLink" />
         <SidebarLink linkId="linkTwo" pTekst="Producing For Vinyl" imgNavn="/vinyl_ikon.png" altTekst="" />
         <SidebarLink linkId="linkThree" pTekst="Audio Master & Cue Sheet" imgNavn="/vinyl_ikon.png" altTekst="" />
@@ -71,6 +71,8 @@ import Footer from "../components/Footer.astro";
   }
 
   .vinylcontainer {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
   }
 
   .sidebarcontainer {
@@ -82,10 +84,14 @@ import Footer from "../components/Footer.astro";
     padding: 40px;
   }
 
+  .stickySidebar {
+    top: 0;
+  }
+
   .section_container {
     max-width: 1080px;
     padding: 80px;
-    margin-left: 320px;
+    /*margin-left: 320px;*/
   }
 
   .section_title_flex {
@@ -103,6 +109,9 @@ import Footer from "../components/Footer.astro";
   }
 
   @media (max-width: 768px) {
+    .vinylcontainer {
+      grid-template-columns: 1fr;
+    }
     .section_container {
       max-width: 1080px;
       padding: 16px;
