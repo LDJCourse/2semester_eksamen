@@ -63,7 +63,7 @@ h3 {
   font-size: 28px;
 }
 
-p, a, .links {
+p, a, .links, .menuButton {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
