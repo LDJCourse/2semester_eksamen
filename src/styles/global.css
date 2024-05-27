@@ -22,9 +22,17 @@
   --padding-desktop2: 40px;
   --padding-desktop3: 32px;
 
-  /* border radius */
+  /* style // border radius */
   --border-radius: 2px;
+  --stroke-effect: solid 2px #161616;
+  --drop-shadow: 8px 8px #161616;
 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -63,11 +71,15 @@ h3 {
   font-size: 28px;
 }
 
-p, a, .links, .menuButton {
+p, a, ul, li, .links, .menuButton {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+a {
+  text-decoration: none;
 }
 
 p {
@@ -102,6 +114,14 @@ button {
 
 .accent_color {
   color: var(--accent-color);
+}
+
+.dropShadow {
+  filter: drop-shadow(var(--drop-shadow));
+}
+
+.stroke {
+  border: var(--stroke-effect);
 }
 
 @media (max-width: 768px) {

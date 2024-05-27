@@ -4,7 +4,10 @@ import LinkButton from "../ReusableComponents/LinkButton.astro";
 
 <div class="container">
   <div class="vinyl_tips_container">
-    <section class="tips_section">
+    <div class="img_container dropShadow stroke">
+      <img src="/vinylmasterimg.jpg" alt="" />
+    </div>
+    <section class="tips_section dropShadow stroke">
       <h1>VINYL MASTERING TIPS</h1>
       <p id="margin_horizontal">Vinyl, like any other format, has its own limitations. To make sure your music sounds great on a record, please comply with general mastering for vinyl standards:</p>
       <ul id="margin_horizontal">
@@ -19,9 +22,6 @@ import LinkButton from "../ReusableComponents/LinkButton.astro";
       </ul>
       <LinkButton title="Learn more" />
     </section>
-    <div class="img_container">
-      <img src="/frontpageimg.png" alt="" />
-    </div>
   </div>
 </div>
 <style>
@@ -31,19 +31,36 @@ import LinkButton from "../ReusableComponents/LinkButton.astro";
     background-repeat: no-repeat;
     display: flex;
     width: 100%;
+    height: auto;
+    margin: auto;
   }
   .vinyl_tips_container {
-    background: var(--secondary-color);
     color: var(--primary-color);
-    margin: 20px 40px;
+    margin: 20px 16px;
     padding: 20px;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-    /* height: 80%; */
-    max-width: 100%;
-    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    width: 100%;
+    gap: 32px;
+  }
+
+  .img_container {
+    width: 100%;
+    height: auto;
+    background: var(--secondary-color);
+  }
+
+  .tips_section {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    background: var(--secondary-color);
+  }
+
+  .tips_section h1,
+  p {
+    color: var(--primary-color);
   }
 
   #margin_horizontal {
@@ -54,24 +71,23 @@ import LinkButton from "../ReusableComponents/LinkButton.astro";
     margin: 10px 0;
   }
 
-  .img_container {
-    width: 100%;
-  }
-
-  img {
-    max-width: 100%;
-  }
   @media (min-width: 768px) {
     .vinyl_tips_container {
-      flex-direction: row;
+      grid-template-columns: auto 3fr;
+      padding: 80px 0;
+      margin: auto;
+      height: auto;
+      max-width: 70vw;
     }
 
     .tips_section {
-      width: 50%;
+      width: 100%;
+      min-width: 100%;
     }
 
     .img_container {
-      width: auto;
+      width: 100%;
+      height: auto;
     }
   }
 </style>
