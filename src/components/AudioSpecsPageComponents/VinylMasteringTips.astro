@@ -48,7 +48,7 @@ import LinkButton from "../ReusableComponents/LinkButton.astro";
   .img_container {
     width: 100%;
     height: auto;
-    background: var(--secondary-color);
+    max-height: fit-content;
   }
 
   .tips_section {
@@ -73,7 +73,7 @@ import LinkButton from "../ReusableComponents/LinkButton.astro";
 
   @media (min-width: 768px) {
     .vinyl_tips_container {
-      grid-template-columns: auto 3fr;
+      grid-template-columns: 3fr 3fr;
       padding: 80px 0;
       margin: auto;
       height: auto;

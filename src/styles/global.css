@@ -11,8 +11,7 @@
   --h1-desktop: ;
   --h2-desktop: ;
   --h3-desktop: ;
-  --p-desktop: 20px;
-  --p-mobile: 17px;
+  --p-desktop: clamp(16px, 2vw, 20px);
   --h1-mobile: ;
   --h2-mobile: ;
   --h3-mobile: ;
@@ -85,6 +84,7 @@ a {
 p {
   font-size: var(--p-desktop);
   line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 button {
@@ -125,7 +125,5 @@ button {
 }
 
 @media (max-width: 768px) {
-  p {
-    font-size: var(--p-mobile);
-  }
+
 }
