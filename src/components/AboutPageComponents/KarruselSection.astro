@@ -1,0 +1,233 @@
+---
+
+---
+
+<div class="container">
+  <input type="radio" name="slider" id="s1" checked />
+  <input type="radio" name="slider" id="s2" />
+  <input type="radio" name="slider" id="s3" />
+  <input type="radio" name="slider" id="s4" />
+
+  <div class="cards">
+    <label for="s1" id="slide1">
+      <div class="card">
+        <div class="image">
+          <img src="carousel_test_1.jpeg" alt="" />
+        </div>
+        <div class="infos">
+          <a href="/details" class="btn-details">LÆS MERE</a>
+        </div>
+      </div>
+    </label>
+
+    <label for="s2" id="slide2">
+      <div class="card">
+        <div class="image">
+          <img src="carousel_test_2.jpeg" alt="" />
+        </div>
+        <div class="infos">
+          <a href="/details" class="btn-details">KØB BILLETTER</a>
+        </div>
+      </div>
+    </label>
+
+    <label for="s3" id="slide3">
+      <div class="card">
+        <div class="image">
+          <img src="carousel_test_3.jpeg" alt="" />
+        </div>
+        <div class="infos">
+          <a href="/details" class="btn-details">STREAM HER</a>
+        </div>
+      </div>
+    </label>
+
+    <label for="s4" id="slide4">
+      <div class="card">
+        <div class="image">
+          <img src="carousel_test_4.jpeg" alt="" />
+        </div>
+        <div class="infos">
+          <a href="/details" class="btn-details">KLIK IKKE HER</a>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+
+<style>
+  input {
+    display: none;
+  }
+
+  .container {
+    width: 60%;
+    padding-bottom: 800px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    flex-direction: column;
+    z-index: 5;
+  }
+
+  /* -------- CARDS ------- */
+
+  .cards {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+
+  .cards label {
+    position: absolute;
+    min-width: 470px;
+    width: fit-content;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+  }
+
+  .cards .card {
+    position: relative;
+    height: 100%;
+    background-color: #837967;
+    /*background-image: linear-gradient(rgb(48, 48, 48) 20%, rgb(8, 8, 8));*/
+    border-radius: 10px;
+    padding: 30px 35px;
+  }
+
+  .cards .image {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cards .image img {
+    border-radius: 5px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 50%);
+    margin-top: 23px;
+    width: 86%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    transition: all 0.7s;
+  }
+
+  .cards .image img:hover {
+    transform: scale(1.05);
+  }
+
+  .cards .image {
+    text-align: center;
+  }
+
+  .card .image {
+    justify-content: center;
+  }
+
+  .cards .infos {
+    display: block;
+    text-align: end;
+    padding-top: 60px;
+  }
+
+  .card .infos span {
+    display: block;
+  }
+
+  .infos .name {
+    font-family: "perfectItalics";
+    font-style: italic;
+    font-size: 30px;
+    color: var(--current-color1);
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    padding-left: 25%;
+    transition: all 0.6s ease;
+  }
+
+  .card .lorem {
+    font-size: 15.5px;
+    color: #eceaed;
+    letter-spacing: 3px;
+  }
+
+  .card .btn-details {
+    width: 100%;
+    height: 60px;
+    margin: 35px auto;
+    border-radius: 5px;
+    background-color: var(--current-color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 10px;
+    font-weight: 700;
+    transition: all 0.7s ease;
+  }
+
+  .card .btn-details:hover {
+    transform: scale(1.09);
+  }
+
+  .card .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  /* ----- CHECKED BUTTONS ----- */
+
+  #s1:checked ~ .cards #slide4,
+  #s2:checked ~ .cards #slide1,
+  #s3:checked ~ .cards #slide2,
+  #s4:checked ~ .cards #slide3 {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 45%);
+    filter: blur(1px);
+    transform: translate3d(-50%, 0, -220px);
+    --current-color1: rgb(100, 224, 178);
+    --current-color2: #2b2b2b;
+  }
+
+  #s1:checked ~ .cards #slide1,
+  #s2:checked ~ .cards #slide2,
+  #s3:checked ~ .cards #slide3,
+  #s4:checked ~ .cards #slide4 {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 50%);
+    transform: translate3d(0, 0, 0);
+    --current-color1: rgb(250, 186, 114);
+    --current-color2: #eceaed;
+  }
+
+  #s1:checked ~ .cards #slide2,
+  #s2:checked ~ .cards #slide3,
+  #s3:checked ~ .cards #slide4,
+  #s4:checked ~ .cards #slide1 {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 45%);
+    filter: blur(1px);
+    transform: translate3d(50%, 0, -120px);
+    --current-color1: rgb(100, 224, 178);
+    --current-color2: #404457;
+  }
+
+  #s1:checked ~ .cards #slide3,
+  #s2:checked ~ .cards #slide4,
+  #s3:checked ~ .cards #slide1,
+  #s4:checked ~ .cards #slide2 {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 45%);
+    filter: blur(2px);
+    transform: translate3d(125%, 0, -220px);
+    --current-color1: rgb(100, 224, 178);
+    --current-color2: #404457;
+  }
+</style>
