@@ -11,6 +11,7 @@
       standards. Hence, cardboard boxes, pallets, adhesive tape and bio film we
       use are environmentally friendly and biodegradable.
     </p>
+    <span>- Reducing carbon emmissions by 90%</span>
     <p>
       In addition to PVC compound, we use bio-vinyl and recycled plastic in
       record production. Providing the same visual and audible quality as
@@ -46,21 +47,31 @@
     max-width: 100%;
   }
 
+  span {
+    color: var(--accent-color);
+  }
+
   @media (min-width: 768px) {
     .container {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      margin: 50px 0;
+
       height: 70vh;
     }
 
     .text_section {
-      width: 25%;
+      width: 35%;
+      line-height: 1.8;
+      font-size: 24px;
     }
 
     .img_container {
       width: auto;
+    }
+
+    img {
+      scale: 1.6;
     }
   }
 </style>

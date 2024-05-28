@@ -20,22 +20,24 @@ import NavigationMenu from "../components/NavigationMenu.astro";
   <main class="container">
     <!-- Indsæt komponenter her  -->
     <div>
-      <PickAFormat />
+      <h1 id="getaquote">GET A QUOTE</h1>
+
+      <!-- <PickAFormat /> -->
+      <p>
+        <span>
+          Fill out the form below to request a quote. We look forward to</span
+        > process your request and will contact you shortly.
+      </p>
       <div class="product_choice_container">
+        <ProductChoice
+          title="Pick a format:"
+          value1="7'' Single"
+          value2="10'' Single"
+          value3="12'' Double LP"
+          value4="12'' EP/LP"
+        />
         <PickQuantity />
 
-        <ProductChoice
-          title="Record weight:"
-          question="How heave would you like your records?"
-          value1="140 gram"
-          value2="180 gram"
-        />
-        <ProductChoice
-          title="Vinyl Color:"
-          question="Would you like your records in black or color?"
-          value1="Black"
-          value2="Color"
-        />
         <ProductChoice
           title="Artwork:"
           question="What are your plans for artwork printing?"
@@ -44,6 +46,21 @@ import NavigationMenu from "../components/NavigationMenu.astro";
           value3="Gatefold"
           value4="Other"
         />
+
+        <ProductChoice
+          title="Record weight:"
+          question="How heave would you like your records?"
+          value1="140 gram"
+          value2="180 gram"
+        />
+
+        <ProductChoice
+          title="Vinyl Color:"
+          question="Would you like your records in black or color?"
+          value1="Black"
+          value2="Color"
+        />
+
         <ProductChoice
           title="Delivery Time:"
           question="Are you in a hurry? We may be able to help you out."
@@ -51,44 +68,60 @@ import NavigationMenu from "../components/NavigationMenu.astro";
           value2="Express - Records are ready within 45 days"
         />
       </div>
-      <TextareaField />
 
       <h1>Contact Information</h1>
       <FormSection />
+      <TextareaField />
     </div>
   </main>
-
-  <script>
-    // Bruger 'DOMContentLoaded' til at køre funktion når alle elementer er indlæst
-    document.addEventListener("DOMContentLoaded", function () {
-      const formats = document.querySelectorAll(".format");
-
-      // Funktion til at der kommer farve på format når der bliver trykket på det
-      formats.forEach((format) => {
-        // Tilføjer click funktion med add eventlistener
-        format.addEventListener("click", function () {
-          // Kører et for loop på alle elementer, vha. forEach()
-          // Fungere som en form for reset
-          // Først fjernes klassen active, der gør at formaterne får farve, fra alle elementer
-          formats.forEach((f) => f.classList.remove("active"));
-          // Derefter tilføjes klassen active, til det formate der blev trykket på
-          format.classList.add("active");
-        });
-      });
-    });
-  </script>
 </Layout>
 
 <style>
-  h1 {
-    margin: 20px;
+  .container {
+    background-image: url("/getaquotebg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
   }
+
+  .getaquote_container {
+    background-image: url("/getaquotebg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+  }
+
+  #getaquote {
+    text-align: center;
+    margin: 100px 0;
+    font-size: 60px;
+  }
+
+  p {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 24px;
+    padding: 20px;
+    width: 100%;
+    line-height: 1.5;
+  }
+
   @media (min-width: 768px) {
     .container {
       display: flex;
+      /* flex-direction: column; */
       justify-content: space-around;
       width: 100%;
     }
+
+    span {
+      display: block;
+    }
+
+    p {
+      font-size: 30px;
+    }
+
     .input_container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -101,3 +134,23 @@ import NavigationMenu from "../components/NavigationMenu.astro";
     }
   }
 </style>
+
+<!-- <script>
+  // Bruger 'DOMContentLoaded' til at køre funktion når alle elementer er indlæst
+  document.addEventListener("DOMContentLoaded", function () {
+    const formats = document.querySelectorAll(".format");
+
+    // Funktion til at der kommer farve på format når der bliver trykket på det
+    formats.forEach((format) => {
+      // Tilføjer click funktion med add eventlistener
+      format.addEventListener("click", function () {
+        // Kører et for loop på alle elementer, vha. forEach()
+        // Fungere som en form for reset
+        // Først fjernes klassen active, der gør at formaterne får farve, fra alle elementer
+        formats.forEach((f) => f.classList.remove("active"));
+        // Derefter tilføjes klassen active, til det formate der blev trykket på
+        format.classList.add("active");
+      });
+    });
+  });
+</script> -->

@@ -1,7 +1,7 @@
 ---
 interface Props {
   title: string;
-  question: string;
+  question?: string;
   value1: string;
   value2: string;
   value3?: string;
@@ -12,14 +12,14 @@ const { title, question, value1, value2, value3, value4 } = Astro.props;
 // const val3 = document.querySelector("#value3");
 // const val4 = document.querySelector("#value3");
 
-let isEmpty = false;
+let isEmpty = true;
 
 if (value3 !== undefined) {
-  isEmpty = true;
+  isEmpty = false;
 }
 
 if (value4 !== undefined) {
-  isEmpty = true;
+  isEmpty = false;
 }
 ---
 
@@ -35,24 +35,25 @@ if (value4 !== undefined) {
       <input type="radio" name={value2} value={value2} />
       <span>{value2}</span>
     </div>
+
     {
       isEmpty ? (
+        ""
+      ) : (
         <div>
           <input type="radio" name={value3} value={value3} />
           <span>{value3}</span>
         </div>
-      ) : (
-        ""
       )
     }
     {
       isEmpty ? (
+        ""
+      ) : (
         <div>
           <input type="radio" name={value4} value={value4} />
           <span>{value4}</span>
         </div>
-      ) : (
-        ""
       )
     }
   </div>
@@ -71,23 +72,21 @@ if (value4 !== undefined) {
     all: unset;
     width: 20px;
     height: 20px;
-    background-color: #555; /* Gray background */
-    border-radius: 15%;
+    background-color: var(--secondary-color); /* white background */
+    border-radius: 50%;
     position: relative;
     outline: none;
     margin: 10px 10px 10px 0;
     vertical-align: middle;
     cursor: pointer;
-    box-shadow: inset 0 0 0 2px #999; /* Light gray border */
   }
 
-  /* Create the inner circle for checked state */
   input:checked::before {
     content: "";
     width: 10px;
     height: 10px;
-    background-color: #fff; /* White inner circle */
-    border-radius: 10%;
+    background-color: var(--accent-color); /* red inner circle */
+    border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
