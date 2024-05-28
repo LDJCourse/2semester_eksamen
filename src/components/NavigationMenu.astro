@@ -1,5 +1,5 @@
 ---
-
+import "../styles/global.css";
 ---
 
 <nav class="navbar">
@@ -7,21 +7,24 @@
     <a href="/" class="logo">RPM RECORDS</a>
     <ul class="nav-links">
       <li class="nav-item">
-        <a href="#">SERVICES <span class="dropdown-icon">&#9660;</span></a>
+        <a href="#">AUDIO/ARTWORK <span class="dropdown-icon">&#9660;</span></a>
         <ul class="dropdown">
-          <li><a href="/audiospecs">AUDIO</a></li>
-          <li><a href="#">ARTWORK</a></li>
+          <li><a href="/audioSpecs">AUDIO</a></li>
+          <li><a href="/#">ARTWORK</a></li>
         </ul>
       </li>
-      <li class="nav-item"><a href="#">VINYL</a></li>
+      <li class="nav-item"><a href="/vinyl">VINYL INFO</a></li>
       <li class="nav-item">
         <a href="/sustainability">SUSTAINABILITY</a>
       </li>
-      <li class="nav-item"><a href="/about">ABOUT</a></li>
+      <li class="nav-item"><a href="/about">ABOUT US</a></li>
     </ul>
-    <a href="/getaquote">
-      <button class="quote-button">Get a Quote</button>
-    </a>
+    <div class="button_wrapper" id="buttonId">
+      <a href="/getaquote">
+        <button class="quote-button">Get a Quote</button>
+      </a>
+      <img src="/arrow-right.svg" alt="" class="button-icon hide" id="arrow_icon" />
+    </div>
   </div>
 </nav>
 <style>
@@ -31,6 +34,10 @@
   @media (min-width: 768px) {
     .navbar {
       display: block;
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 333;
       background-color: rgb(12, 12, 12);
       padding: 10px 80px;
     }
@@ -43,8 +50,11 @@
 
     .logo {
       color: #fa8072;
-      font-size: 1.5em;
-      font-weight: bold;
+      font-family: "Fjalla One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 2em;
+      text-decoration: none;
       margin-right: 40px; /* Adjust the spacing as needed */
     }
 
@@ -62,6 +72,10 @@
     }
 
     .nav-item a {
+      font-family: "Fjalla One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 18px;
       color: #fff;
       text-decoration: none;
       padding: 5px 10px;
@@ -106,20 +120,66 @@
       margin-left: 5px;
     }
 
-    .quote-button {
+    .hide {
+      display: none;
+      transition: 0.3s ease-in-out all;
+    }
+
+    /*.quote-button {
       background-color: var(--accent-color);
       color: #fff;
+      font-family: "Fjalla One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.5rem;
       border: none;
       padding: 10px 20px;
       cursor: pointer;
-      margin-left: auto; /* Pushes the button to the far right */
-    }
-
+      margin-left: auto; /* Pushes the button to the far right */ /*    }*/
+    /*
     .quote-button:hover,
     .quote-button:focus {
       background-color: #f04333;
+    }*/
+
+    .button_wrapper {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--accent-color);
+      color: #fff;
+      font-family: "Fjalla One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.5rem;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-left: auto;
+      transition: 0.3s ease-in-out all;
+    }
+
+    .button_wrapper:hover,
+    .button_wrapper:focus {
+      background-color: #f04333;
+      transition: 0.3s ease-in-out all;
     }
   }
 </style>
 
 <!-- Eksempel på komponent  -->
+
+<script>
+  const buttonArrow = document.querySelector("#buttonId");
+  const arrowIcon = document.querySelector("#arrow_icon");
+  buttonArrow.addEventListener("mouseover", hideRemove);
+
+  function hideRemove() {
+    arrowIcon.classList.remove("hide");
+    buttonArrow.addEventListener("mouseout", addRemove);
+  }
+  function addRemove() {
+    arrowIcon.classList.add("hide");
+  }
+</script>

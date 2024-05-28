@@ -6,27 +6,25 @@
   <div class="img_container">
     <img src="/frontpageimg.png" alt="" />
   </div>
-  <section class="text_section">
-    <h1>OUR STORY</h1>
-    <p>
-      We started as a dubplate studio in 2015, cutting limited runs for
-      independent artists. By 2018 we acquired our first vinyl press and RPM
-      Records was born. Since our founding, we have aspired to produce premium
-      quality records faster and more accessible.This way helping independent
-      artists and labels to showcase their best work on vinyl.
-    </p>
-    <p>
-      As new generation producers, we approach ecological degradation with
-      earnest concern. Thus, paving the way for sustainable production and
-      longevity of a clean physical format. All while maintaining some of the
-      highest quality standards in the industry.
-    </p>
+  <section class="text_section dropShadow stroke">
+    <h2>OUR STORY</h2>
+    <p>We started as a dubplate studio in 2015, cutting limited runs for independent artists. By 2018 we acquired our first vinyl press and RPM Records was born. Since our founding, we have aspired to produce premium quality records faster and more accessible.This way helping independent artists and labels to showcase their best work on vinyl.</p>
+    <p>As new generation producers, we approach ecological degradation with earnest concern. Thus, paving the way for sustainable production and longevity of a clean physical format. All while maintaining some of the highest quality standards in the industry.</p>
   </section>
 </div>
+
 <style>
+  h1,
+  h2,
+  p {
+    color: var(--primary-color);
+  }
   .container {
-    padding: 20px;
+    height: 100vh;
+    width: 100%;
+    padding: 8px;
     background: var(--tertiary-color);
+    background-image: url("../img/rpm_purple_bg.webp");
   }
 
   .img_container {
@@ -44,29 +42,32 @@
   }
 
   .text_section {
-    padding: 20px;
+    padding: 16px;
+    width: 90%;
     background: var(--secondary-color);
     color: var(--primary-color);
-    line-height: 1.8;
+    line-height: 1.6;
     border: 3px solid black;
+    height: fit-content;
   }
 
   @media (min-width: 768px) {
     .container {
-      display: flex;
-      justify-content: space-around;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
     .text_section {
-      width: 30%;
-      line-height: 2;
-    }
-
-    p {
-      margin: 30px 0;
+      justify-self: center;
+      align-self: center;
+      padding: 24px 40px;
+      margin-right: 80px;
     }
     .img_container {
-      width: auto;
-      height: 400px;
+      width: 100%;
+      max-height: 620px;
+      height: auto;
+      justify-self: center;
+      align-self: center;
     }
   }
 </style>

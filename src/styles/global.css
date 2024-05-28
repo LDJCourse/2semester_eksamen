@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
-  --primary-color: #181818;
+  --primary-color: #161616;
   --secondary-color: #ffffff;
-  --accent-color: #e55e5b;
-  --tertiary-color: #B6C07C;
 
   /* Font størrelser */
   --title-font: ;
   --h1-desktop: ;
   --h2-desktop: ;
   --h3-desktop: ;
+  --p-desktop: clamp(16px, 2vw, 20px);
   --h1-mobile: ;
   --h2-mobile: ;
   --h3-mobile: ;
@@ -18,12 +19,117 @@
   --padding-desktop2: 40px;
   --padding-desktop3: 32px;
 
+  /* style // border radius */
+  --border-radius: 2px;
+  --stroke-effect: solid 2px #161616;
+  --drop-shadow: 8px 8px #161616;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   background-color: var(--primary-color);
   color: var(--secondary-color);
   font-family: sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, p, a {
+  color: var(--secondary-color);
+}
+
+h1, h2, h3, h4, button {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: clamp(40px, 4vw, 80px);
+}
+
+h2 {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+p, a, ul, li, .links, .menuButton {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: var(--p-desktop);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+li {
+  list-style-position: inside;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 1.5rem;
+}
+
+.button-icon {
+  height: 32px;
+  width: 32px;
+}
+
+.button_wrapper {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.parallaxLayer {
+  position: relative;
+  z-index: 3;
+}
+
+.accent_color {
+  color: var(--accent-color);
+}
+
+.dropShadow {
+  filter: drop-shadow(var(--drop-shadow));
+}
+
+.stroke {
+  border: var(--stroke-effect);
+}
+
+@media (max-width: 768px) {
+
 }
 
 .reveal {

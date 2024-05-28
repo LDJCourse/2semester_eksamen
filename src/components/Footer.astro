@@ -1,0 +1,162 @@
+---
+import "../styles/global.css";
+---
+
+<footer>
+  <div class="footer_container">
+    <div class="footer_info">
+      <div class="infobox1">
+        <p>Priorparken 510</p>
+        <p>2605 Brøndby</p>
+        <p>Danmark</p>
+      </div>
+      <div class="infobox2">
+        <p>+45 31 13 84 74</p>
+        <p>contact@rpmrecords.dk</p>
+        <p>CVR: 39029006</p>
+        <p>info@rpmrecords.dk</p>
+      </div>
+    </div>
+    <div class="logo_wrapper">
+      <img src="/rpm_logo.svg" alt="" class="rpm_logo" />
+      <div class="icon_wrapper">
+        <img src="/youtubeIkon.svg" alt="" class="footer_ikon" />
+        <img src="/facebookIkon.svg" alt="" class="footer_ikon" />
+        <img src="/twitterIkon.svg" alt="" class="footer_ikon" />
+        <img src="/instagram.svg" alt="" class="footer_ikon" />
+        <img src="/linkedInIkon.svg" alt="" class="footer_ikon" />
+      </div>
+      <p class="accent_color">FIND US ON OUR SOCIALS</p>
+    </div>
+    <div class="links_wrapper">
+      <div class="footer_button_container">
+        <p>Ready to order?</p>
+        <div class="button"></div>
+      </div>
+      <div class="links">
+        <a href="/">Audio/Artwork</a>
+        <a href="">Vinyl Info</a>
+        <a href="">Sustainability</a>
+        <a href="">About Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    z-index: 44444;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  .footer_container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin: auto;
+    padding: 80px 32px;
+    max-width: 1920px;
+  }
+
+  .footer_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 32px;
+  }
+
+  .footer_info p {
+    margin: 0;
+  }
+
+  .logo_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rpm_logo {
+    width: 100%;
+    max-width: 344px;
+    height: auto;
+    max-height: 271px;
+  }
+
+  .icon_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 48px 0 8px 0;
+    gap: 36px;
+  }
+
+  .footer_ikon {
+    height: auto;
+    max-height: 47px;
+    min-width: 40px;
+    width: 100%;
+    max-width: 48px;
+  }
+
+  .links_wrapper,
+  .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  .ikon_a {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  /* Media query for mobile */
+  @media (max-width: 768px) {
+    .footer_container {
+      grid-template-columns: 1fr;
+      padding: 80px 16px;
+      gap: 40px;
+    }
+
+    .footer_info {
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .infobox1,
+    .infobox2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .icon_wrapper {
+      flex-wrap: wrap;
+      width: 100%;
+      height: auto;
+      padding: 16px 0 8px 0;
+    }
+
+    .footer_ikon {
+      height: auto;
+      width: 100%;
+      min-width: 48px;
+      max-height: 39px;
+      max-width: 40px;
+    }
+
+    .links_wrapper,
+    .links {
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+</style>

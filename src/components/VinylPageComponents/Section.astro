@@ -1,0 +1,45 @@
+---
+const { header, header3, imgtext, alttext, sectionId } = Astro.props;
+---
+
+<section id={sectionId}>
+  <div class="section_title_flex">
+    <img src={imgtext} alt={alttext} class="icon_vinyl" />
+    <h2>{header}</h2>
+  </div>
+  <slot />
+</section>
+
+<style>
+  section {
+    padding: 54px 0;
+    max-width: 730px;
+  }
+
+  .section_container {
+    max-width: 880px;
+    padding: 80px;
+    margin-left: 25%;
+  }
+
+  .section_title_flex {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .icon_vinyl {
+    height: 75px;
+    width: 76px;
+  }
+
+  @media (max-width: 768px) {
+    section {
+      padding: 24px 0;
+    }
+    .icon_vinyl {
+      height: 54px;
+      width: 55px;
+    }
+  }
+</style>

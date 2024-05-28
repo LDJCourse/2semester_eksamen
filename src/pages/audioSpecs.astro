@@ -7,7 +7,10 @@ import AudioSpecsIntro from "../components/AudioSpecsPageComponents/AudioSpecsIn
 import VinylMasteringTips from "../components/AudioSpecsPageComponents/VinylMasteringTips.astro";
 import ImageSection from "../components/AudioSpecsPageComponents/ImageSection.astro";
 import VinylInfoSection from "../components/AudioSpecsPageComponents/VinylInfoSection.astro";
+import ImageQuote from "../components/AudioSpecsPageComponents/ImageQuote.astro";
+import MasteringForVinyl from "../components/AudioSpecsPageComponents/MasteringForVinyl.astro";
 import NavigationMenu from "../components/NavigationMenu.astro";
+import Footer from "../components/Footer.astro";
 // Skriv javascript her
 ---
 
@@ -20,10 +23,14 @@ import NavigationMenu from "../components/NavigationMenu.astro";
     <VinylMasteringTips />
     <ImageSection />
     <VinylInfoSection />
+    <ImageQuote />
+    <MasteringForVinyl />
   </main>
+  <Footer />
 </Layout>
 
 <style>
   main {
+    width: 100%;
   }
 </style>

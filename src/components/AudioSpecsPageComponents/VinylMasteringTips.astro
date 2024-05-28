@@ -1,79 +1,98 @@
 ---
-import LinkButton from "../ReusableComponents/LinkButton.astro"
+import LinkButton from "../ReusableComponents/LinkButton.astro";
 ---
+
 <div class="container">
-    <div class="vinyl_tips_container">
-        <section class="tips_section">
-            <h1>VINYL MASTERING TIPS</h1>
-            <p id="margin_horizontal">
-                Vinyl, like any other format, has its own limitations. 
-                To make sure your music sounds great on a record, 
-                please comply with general mastering for vinyl standards:
-            </p>
-            <ul id="margin_horizontal">
-                <li>Peak Level: 0db</li>
-                <li>Low-frequency cut at 10hz</li>
-                <li>Low frequencies below 250hz in mono</li>
-                <li>Be careful with extreme peaking above 16khz</li>
-                <li>No negative phase returns</li>
-                <li>Stereo width between +0.5 and 1</li>
-                <li>File formatting: .wav / .aif</li>
-                <li>Audio quality: 24bit; 44.1- 48Khz</li>
-            </ul>
-            <LinkButton title="Learn more"/>
-        </section>
-        <div class="img_container">
-            <img src="/frontpageimg.png" alt="">
-        </div>
+  <div class="vinyl_tips_container">
+    <div class="img_container dropShadow stroke">
+      <img src="/vinylmasterimg.jpg" alt="" />
     </div>
+    <section class="tips_section dropShadow stroke">
+      <h1>VINYL MASTERING TIPS</h1>
+      <p id="margin_horizontal">Vinyl, like any other format, has its own limitations. To make sure your music sounds great on a record, please comply with general mastering for vinyl standards:</p>
+      <ul id="margin_horizontal">
+        <li>Peak Level: 0db</li>
+        <li>Low-frequency cut at 10hz</li>
+        <li>Low frequencies below 250hz in mono</li>
+        <li>Be careful with extreme peaking above 16khz</li>
+        <li>No negative phase returns</li>
+        <li>Stereo width between +0.5 and 1</li>
+        <li>File formatting: .wav / .aif</li>
+        <li>Audio quality: 24bit; 44.1- 48Khz</li>
+      </ul>
+      <LinkButton title="Learn more" />
+    </section>
+  </div>
 </div>
 <style>
-    .container {
-        background: var(--tertiary-color);
-        display: flex;
-        width: 100%;
-    }
+  .container {
+    background: var(--tertiary-color);
+    background-image: url(/public/img/rpm_purple_bg.webp);
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .vinyl_tips_container {
+    color: var(--primary-color);
+    padding: 80px 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    width: 100%;
+    gap: 32px;
+  }
+
+  .img_container {
+    width: 100%;
+    height: auto;
+    max-height: fit-content;
+  }
+
+  .img_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .tips_section {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    background: var(--secondary-color);
+  }
+
+  .tips_section h1,
+  p {
+    color: var(--primary-color);
+  }
+
+  #margin_horizontal {
+    margin: 40px 0;
+  }
+
+  ul li {
+    margin: 10px 0;
+  }
+
+  @media (min-width: 768px) {
     .vinyl_tips_container {
-        background: var(--secondary-color);
-        color: var(--primary-color);
-        margin: 20px 40px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-around;
-        align-items: center;
-        /* height: 80%; */
-        max-width: 100%;
+      grid-template-columns: 3fr 3fr;
+      padding: 80px 0;
+      margin: auto;
+      height: auto;
+      max-width: 70vw;
     }
 
-
-    #margin_horizontal {
-        margin: 40px 0;
-    }
-
-    ul li {
-        margin: 10px 0;
+    .tips_section {
+      width: 100%;
+      min-width: 100%;
     }
 
     .img_container {
-        width: 100%;
+      width: 100%;
+      height: auto;
     }
-
-    img {
-        max-width: 100%;
-    }
-    @media (min-width: 768px) {
-        .vinyl_tips_container {
-            flex-direction: row;
-        }
-        
-        .tips_section {
-            width: 50%;
-        }
-
-        .img_container {
-            width: auto;
-        }
-    }
+  }
 </style>
-

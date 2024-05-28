@@ -3,17 +3,35 @@
 ---
 
 <section class="container">
-  <h1>CLIENTS</h1>
-  <p>
-    RPM Records caters to diverse clients globally, from indie artists to major
-    labels and distributors across North America, Europe, and Asia. We're known
-    for our fast, top-notch service and unwavering fairness to all, irrespective
-    of scale or stature.
-  </p>
+  <div class="clients_wrapper">
+    <h1>CLIENTS</h1>
+    <p>RPM Records caters to diverse clients globally, from indie artists to major labels and distributors across North America, Europe, and Asia. We're known for our fast, top-notch service and unwavering fairness to all, irrespective of scale or stature.</p>
+  </div>
 </section>
+
 <style>
   .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     padding: 20px;
+    height: 60vh;
+  }
+
+  .clients_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .karrusel_wrapper {
+    grid-row: 2 / 3;
+    width: 60%;
+    height: auto;
   }
   h1 {
     text-align: center;
@@ -24,12 +42,22 @@
   }
   @media (min-width: 768px) {
     .container {
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+
+    .clients_wrapper {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
+      width: 60%;
+      gap: 16px;
     }
-    p {
-      width: 30%;
+
+    .karrusel_wrapper {
+      height: 60%;
     }
   }
 </style>

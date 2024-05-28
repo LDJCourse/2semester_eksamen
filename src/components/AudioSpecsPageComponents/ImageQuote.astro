@@ -1,0 +1,54 @@
+---
+
+---
+
+<section>
+  <div class="container">
+    <div class="text_wrapper">
+      <p>“Det fede ved vinyler er at ingen af dem er ens. Så når man hører sangene, så vil man altid høre dem med de uperfekte sider, der gør hver vinyl unik”</p>
+      <p>Guðmundur Ørn Ísfeld, RPM Records</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .container {
+    position: relative;
+    background-image: url("../public/quote_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: fill;
+    overflow-x: auto;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .text_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: none;
+    padding: 16px;
+  }
+
+  .text_wrapper p {
+    max-width: 540px;
+    text-align: center;
+    font-size: clamp(20px, 4vw, 24px);
+    font-style: italic;
+  }
+
+  @media (min-width: 768px) {
+    .text_wrapper {
+      padding-left: 80px;
+    }
+
+    .text_wrapper p {
+      max-width: 540px;
+      text-align: left;
+    }
+  }
+</style>

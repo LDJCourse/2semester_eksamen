@@ -1,0 +1,47 @@
+---
+import "/src/styles/global.css";
+const { imgNavn, altTekst, pTekst, idNumber, linkId } = Astro.props;
+---
+
+<div class="sidebar_tekst_wrapper" id={linkId}>
+  <img src={imgNavn} alt={altTekst} class="sidebar_ikoner" />
+  <p class="vinyl_sidebar"><a href="javascript:void(0)" class="sidebarTekst">{pTekst}</a></p>
+</div>
+
+<style>
+  .vinyl_sidebar a {
+    padding: 4px 0;
+    font-size: 20px;
+  }
+  a {
+    color: var(--primary-color);
+  }
+  .sidebar_tekst_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .vinyl_sidebar {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+
+  .sidebar_ikoner {
+    height: 24px;
+    width: 24px;
+  }
+
+  .sidebarTekst {
+    font-size: 16px;
+  }
+
+  .sidebar_tekst_wrapper:hover {
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .vinyl_sidebar a {
+      font-size: 17px;
+    }
+  }
+</style>

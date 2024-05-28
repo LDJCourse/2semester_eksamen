@@ -1,0 +1,141 @@
+---
+import "/src/styles/global.css";
+---
+
+<div class="sidebarcontainer" id="sideBarWrapper">
+  <h2>Find a Topic:</h2>
+  <div class="sidebarlink_wrapper" id="linkButton">
+    <slot />
+  </div>
+</div>
+<div class="button_bg" id="buttonBackground">
+  <div class="menuButton" id="vinylButtonClose">Close</div>
+  <div class="menuButton" id="vinylButtonOpen">Find a Topic</div>
+</div>
+
+<style>
+  .sidebarcontainer {
+    /*position: fixed;*/
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    grid-column: 1 / 2;
+    height: 100vh;
+    width: 280px;
+    padding: 80px 56px 0 24px;
+  }
+
+  .sidebarcontainer h2 {
+    color: var(--primary-color);
+    margin-bottom: 32px;
+  }
+
+  .menuButton {
+  }
+
+  .button_bg {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    /* Foldout menu */
+    .sidebarcontainer {
+      display: none;
+      position: fixed;
+      flex-direction: column;
+      padding: 80px 24px 0 24px;
+      width: 100%;
+      transition: all ease 1s;
+    }
+
+    .menuButton {
+      display: flex;
+      justify-content: center;
+      max-width: 100%;
+      background-color: var(--primary-color);
+      padding: 16px 32px;
+      bottom: 0;
+      font-weight: 700;
+      border-radius: var(--border-radius);
+    }
+
+    .button_bg {
+      display: block;
+      height: auto;
+      background-color: var(--primary-color);
+      width: 100%;
+      height: auto;
+      position: fixed;
+      bottom: 0;
+      padding: 32px 0;
+      z-index: 99999;
+    }
+
+    #vinylButtonClose {
+      display: none;
+      margin: 0 16px;
+      z-index: 99999;
+    }
+
+    #vinylButtonOpen {
+      display: flex;
+      justify-content: center;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      /*width: 80%;
+      position: fixed;
+      bottom: 5%;*/
+      padding: 16px 32px;
+      margin: 0 16px;
+      z-index: 99999;
+    }
+
+    .hideButton {
+      display: none !important;
+    }
+
+    .showButton {
+      display: flex !important;
+    }
+
+    .showMenu {
+      display: flex;
+    }
+
+    .whiteBg {
+      background-color: var(--secondary-color);
+    }
+  }
+</style>
+
+<script>
+  const buttonOpen = document.querySelector("#vinylButtonOpen");
+  const buttonClose = document.querySelector("#vinylButtonClose");
+  const linkTap = document.querySelector("#linkButton");
+  const foldOutMenu = document.querySelector("#sideBarWrapper");
+  const buttonBackg = document.querySelector("#buttonBackground");
+
+  window.addEventListener("load", sidenVises);
+  function sidenVises() {
+    console.log("Foldout menu");
+    buttonOpen.addEventListener("click", menuOpen);
+  }
+
+  function menuOpen() {
+    console.log("menuOpen");
+    foldOutMenu.classList.add("showMenu");
+    buttonOpen.classList.add("hideButton");
+    buttonClose.classList.add("showButton");
+    buttonBackg.classList.add("whiteBg");
+    buttonClose.addEventListener("click", menuClose);
+    linkTap.addEventListener("click", menuClose);
+  }
+
+  function menuClose() {
+    console.log("menu closed");
+    foldOutMenu.classList.remove("showMenu");
+    buttonOpen.classList.remove("hideButton");
+    buttonClose.classList.remove("showButton");
+    buttonBackg.classList.remove("whiteBg");
+  }
+</script>

@@ -3,23 +3,28 @@
 ---
 
 <section class="container">
-  <h1>ABOUT RPM RECORDS</h1>
-  <p>
-    As a small record-pressing plant, we handle each order with meticulous
-    precision.Our team listens to records throughout production and visually
-    inspects every single one. We adapt our services as required and respond
-    promptly and efficiently.
-  </p>
-  <p>
-    RPM employees are passionate vinyl enthusiasts, DJs, musicians, and
-    producers with diverse tastes in music.We are dedicated to upholding the
-    highest quality standards, delivering warm, natural sound, and promoting
-    sustainable production practices.
-  </p>
+  <div class="about_wrapper">
+    <h1>ABOUT RPM RECORDS</h1>
+    <p>As a small record-pressing plant, we handle each order with meticulous precision. Our team listens to records throughout production and visually inspects every single one. We adapt our services as required and respond promptly and efficiently.</p>
+    <p>RPM employees are passionate vinyl enthusiasts, DJs, musicians, and producers with diverse tastes in music. We are dedicated to upholding the highest quality standards, delivering warm, natural sound, and promoting sustainable production practices.</p>
+  </div>
 </section>
 <style>
   .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
     padding: 20px;
+  }
+
+  .about_wrapper {
+    display: grid;
+    height: auto;
+    width: 100%;
+    gap: 16px;
   }
 
   h1 {
@@ -27,14 +32,11 @@
     margin: 40px 0;
   }
   @media (min-width: 768px) {
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    p {
-      width: 35%;
-      line-height: 2;
+    .about_wrapper {
+      display: grid;
+      height: auto;
+      width: 60%;
+      gap: 16px;
     }
   }
 </style>
