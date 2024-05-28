@@ -1,0 +1,59 @@
+---
+import Reason from "./Reason.astro";
+---
+
+<section>
+  <h1>WHY RPM RECORDS?</h1>
+  <div class="reasons_why_container">
+    <Reason
+      svg="/reason1.svg"
+      title="A sustainable choice"
+      mainText=`We are committed to eco-friendly vinyl production, 
+            minimizing pollution, conserving energy and resources, 
+            and reducing CO2 emissions at every step.`
+      subText=`Here you can order records powered by wind energy, 
+            made from bio-vinyl, printed on wood-free paper with vegan ink
+            and delivered zero-emissions.`
+    />
+    <Reason
+      svg="/reason2.svg"
+      title="Trusted partner worldwide"
+      mainText=`RPM Records serves a diverse clientele globally, 
+            from independent artists to major labels, offering fast, 
+            high-quality service across North America, Europe, and Asia.`
+      subText=`Our commitment to equal standards and flexibility 
+            is valued by all our clients, regardless of size or origin.`
+    />
+    <Reason
+      svg="/reason3.svg"
+      title="Devoted to quality"
+      mainText=`RPM Records is devoted to the enduring vinyl tradition, 
+            modern technology and deep understanding of production methods. `
+      subText=`Here you can order records powered by wind energy, 
+            made from bio-vinyl, printed on wood-free paper with vegan ink
+            and delivered zero-emissions.`
+    />
+  </div>
+</section>
+<style>
+  .reasons_why_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    text-align: center;
+  }
+
+  section {
+    background: var(--tertiary-color);
+    padding: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .reasons_why_container {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+</style>

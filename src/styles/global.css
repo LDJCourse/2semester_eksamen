@@ -2,7 +2,7 @@
   --primary-color: #181818;
   --secondary-color: #ffffff;
   --accent-color: #e55e5b;
-  --tertiary-color: #546f55;
+  --tertiary-color: #B6C07C;
 
   /* Font størrelser */
   --title-font: ;
@@ -24,4 +24,28 @@ html {
   background-color: var(--primary-color);
   color: var(--secondary-color);
   font-family: sans-serif;
+}
+
+.reveal {
+  position: relative;
+  transform: translateX(-450px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reveal.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.delay1 {
+  transition-delay: 1s;
+}
+
+.delay2 {
+  transition-delay: 2.5s;
+}
+
+.delay3 {
+  transition-delay: 4s;
 }

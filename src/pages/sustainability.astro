@@ -6,8 +6,9 @@ import "../styles/global.css";
 import IntroImg from "../components/SustainabilityPageComponents/IntroImg.astro";
 import EcofriendlyMats from "../components/SustainabilityPageComponents/EcofriendlyMats.astro";
 import ProductionSection from "../components/SustainabilityPageComponents/ProductionSection.astro";
-import ValueChainSection from "../components/SustainabilityPageComponents/ValueChainSection.astro";
+
 import NavigationMenu from "../components/NavigationMenu.astro";
+import MaterialsSection from "../components/SustainabilityPageComponents/MaterialsSection.astro";
 
 // Skriv javascript her
 ---
@@ -20,67 +21,37 @@ import NavigationMenu from "../components/NavigationMenu.astro";
     <IntroImg />
     <EcofriendlyMats />
     <ProductionSection />
-    <ValueChainSection />
-    <div class="container">
-      <section class="text_section">
-        <h1>Ecofriendly material selection</h1>
-        <ul>
-          <li>FSC certified paper products</li>
-          <li>Wood-free and recycled paper</li>
-          <li>Plant-based vegan ink</li>
-          <li>Biodegradable stickers</li>
-          <li>Bio-vinyl and recycled plastic</li>
-          <li>Sugar cane bio film.</li>
-          <li>Paper adhesive tape</li>
-        </ul>
-      </section>
-      <section class="text_section">
-        <h1>Sustainable production workflow</h1>
-        <ul>
-          <li>Automatization and high efficiency</li>
-          <li>Smart, innovative technology</li>
-          <li>Recycling and minimum waste</li>
-          <li>Energy conservation</li>
-          <li>Experienced workforce</li>
-          <li>Continuous Learning</li>
-        </ul>
-      </section>
-      <section class="text_section">
-        <h1>Traits of responsible value chain</h1>
-        <ul>
-          <li>Safe management of hazardous waste</li>
-          <li>Green energy infrastructure</li>
-          <li>Zero emission logistics</li>
-          <li>Continuous investment in sustainability</li>
-          <li>Carbon neutral operation</li>
-        </ul>
-      </section>
-    </div>
+    <h1>100% recycled plastic billede her</h1>
+    <MaterialsSection />
   </main>
 </Layout>
 
 <style>
   main {
   }
+</style>
 
-  .container {
-    background: var(--tertiary-color);
-    padding: 20px;
-  }
-
-  .text_section {
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    border: 3px solid var(--primary-color);
-    box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 1);
-    padding: 20px;
-    margin: 40px 0;
-  }
-
-  @media (min-width: 768px) {
-    .container {
-      display: flex;
-      justify-content: space-around;
+<script>
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      //
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+        reveals[i].classList.add("scale_100");
+        reveals[i].classList.add("bar_fill");
+      }
+      // else {
+      //   reveals[i].classList.remove("active");
+      // }
     }
   }
-</style>
+
+  window.addEventListener("scroll", reveal);
+
+  // To check the scroll position on page load
+  reveal();
+</script>
