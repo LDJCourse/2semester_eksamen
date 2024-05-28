@@ -3,10 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 
 // Importer komponenter her
-import ForsideImg from "../components/IndexPageComponents/ForsideImg.astro";
-import VinylPressing from "../components/IndexPageComponents/VinylPressing.astro";
-import ReasonsWhy from "../components/IndexPageComponents/ReasonsWhy.astro";
-import CustomerReviews from "../components/IndexPageComponents/CustomerReviews.astro";
+import ForsideImgSection from "../components/IndexPageComponents/ForsideImgSection.astro";
+import VinylPressingSection from "../components/IndexPageComponents/VinylPressingSection.astro";
+import ReasonsWhySection from "../components/IndexPageComponents/ReasonsWhySection.astro";
+import CustomerReviewsSection from "../components/IndexPageComponents/CustomerReviewsSection.astro";
 import NavigationMenu from "../components/NavigationMenu.astro";
 
 // Skriv javascript her
@@ -17,10 +17,10 @@ import NavigationMenu from "../components/NavigationMenu.astro";
   <main>
     <NavigationMenu />
     <!-- Indsæt komponenter her  -->
-    <ForsideImg />
-    <VinylPressing />
-    <ReasonsWhy />
-    <CustomerReviews />
+    <ForsideImgSection />
+    <VinylPressingSection />
+    <ReasonsWhySection />
+    <CustomerReviewsSection />
   </main>
 </Layout>
 
@@ -29,3 +29,5 @@ import NavigationMenu from "../components/NavigationMenu.astro";
     width: 100%;
   }
 </style>
+
+<!-- dd -->

@@ -1,15 +1,13 @@
 ---
 import InputField from "./InputField.astro";
-import FormButton from "../ReusableComponents/FormButton.astro";
 ---
 
-<div class="input_container">
-  <InputField placeholder="First name" label="First name" />
-  <InputField placeholder="Last name" label="Last name" />
-  <InputField placeholder="Company name" label="Company name" />
-  <InputField placeholder="Your email" label="Email" />
-  <FormButton title="Submit order" />
-</div>
+<form class="input_container">
+  <InputField placeholder="First name:" label="First name:" />
+  <InputField placeholder="Last name:" label="Last name:" />
+  <InputField placeholder="Company name:" label="Company name:" />
+  <InputField placeholder="Your email:" label="Email:" />
+</form>
 <style>
   main {
   }
