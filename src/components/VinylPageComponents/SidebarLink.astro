@@ -9,8 +9,9 @@ const { imgNavn, altTekst, pTekst, idNumber, linkId } = Astro.props;
 </div>
 
 <style>
-  p {
+  .vinyl_sidebar a {
     padding: 4px 0;
+    font-size: 20px;
   }
   a {
     color: var(--primary-color);
@@ -36,5 +37,11 @@ const { imgNavn, altTekst, pTekst, idNumber, linkId } = Astro.props;
 
   .sidebar_tekst_wrapper:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .vinyl_sidebar a {
+      font-size: 17px;
+    }
   }
 </style>
