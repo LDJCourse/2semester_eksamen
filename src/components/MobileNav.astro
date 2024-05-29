@@ -4,10 +4,13 @@
 
 <nav class="">
   <div class="mobileMenuWrapper">
-    <div class="logo">RPM Records</div>
-    <div class="toggle">
-      <img src="../ikoner/burger-menu.svg" alt="burger menu" class="burger_ikon" />
+    <div class="burger_wrapper">
+      <div class="logo">RPM Records</div>
+      <div class="toggle">
+        <img src="../ikoner/burger-menu.svg" alt="burger menu" class="burger_ikon" />
+      </div>
     </div>
+
     <div class="menu">
       <ul>
         <li><a href="/index">RPM Records</a></li>
@@ -31,18 +34,25 @@
     background-color: var(--primary-color);
     display: flex;
     align-items: center;
-    padding-left: 16px;
+    padding: 0 16px;
     z-index: 9999999;
   }
 
+  .burger_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .burger_ikon {
-    height: 24px;
-    width: 24px;
+    height: 32px;
+    width: 32px;
   }
   .toggle {
-    position: fixed;
+    /*position: fixed;
     top: 16px;
-    right: 40px;
+    right: 40px;*/
     z-index: 99999999;
     cursor: pointer;
     display: block;
