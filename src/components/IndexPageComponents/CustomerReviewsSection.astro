@@ -1,33 +1,56 @@
 ---
 import CustomerReview from "./CustomerReview.astro";
-
-const apikey = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlmY2F3ZGx1Y29ib2hmbm1yeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU5NDU3OTcsImV4cCI6MjAzMTUyMTc5N30.Tncixva_zJhjtqjW-cBPr9RFrDbPfLxGtp5c9EhnIn4`;
-
-const res = await fetch(
-  `https://ifcawdlucobohfnmrxmg.supabase.co/rest/v1/comments?apikey=${apikey}`
-);
-const data = await res.json();
 ---
 
-<section>
+<section class="reviewSection">
   <h1>WHAT OUR CUSTOMERS SAY?</h1>
   <div class="customer_reviews_container">
-    {
-      data.map((comment) => (
-        <CustomerReview name={comment.name} comment={comment.comment} />
-      ))
-    }
+    <img src="/google_review_frame.svg" class="review_desktop" alt="" />
+    <div class="mobile_review_wrapper">
+      <img src="/google_review_mobile.svg" alt="" class="gReviewMobile" />
+      <img src="/google_stars_mobile.svg" alt="" class="gStars" />
+    </div>
   </div>
 </section>
 <style>
+  .reviewSection {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
   .customer_reviews_container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  .mobile_review_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 32px;
+  }
+
+  .gStars {
+    width: 80%;
+  }
+
+  .review_desktop {
+    display: none;
   }
 
   h1 {
-    font-size: 20px;
     text-align: center;
+    color: var(--secondary-color);
   }
 
   section {
@@ -35,5 +58,11 @@ const data = await res.json();
   }
 
   @media (min-width: 768px) {
+    .customer_reviews_container {
+      width: 66%;
+    }
+    .mobile_review_wrapper {
+      display: none;
+    }
   }
 </style>
