@@ -1,9 +1,9 @@
 ---
-const { source, altTekst } = Astro.props;
+const { source, altTekst, href } = Astro.props;
 ---
 
 <div class="ikon_wrapper">
-  <img src={source} alt={altTekst} class="footer_ikon" />
+  <a href={href}> <img src={source} alt={altTekst} class="footer_ikon" /></a>
 </div>
 
 <style>

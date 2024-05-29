@@ -1,8 +1,8 @@
 ---
-const { href, tekst, farve, tekstFarve } = Astro.props;
+const { href, tekst, farve, tekstFarve, hoverFarve } = Astro.props;
 ---
 
-<div class=`button_wrapper stroke dropShadow ${farve}` id="buttonId">
+<div class=`button_wrapper stroke dropShadow ${farve} ${hoverFarve}` id="buttonId">
   <a href={href}>
     <button class=`quote-button ${tekstFarve}`>{tekst}</button>
   </a>
@@ -20,7 +20,7 @@ const { href, tekst, farve, tekstFarve } = Astro.props;
     font-style: normal;
     font-size: 1.5rem;
     border: none;
-    padding: 10px 20px;
+    padding: 16px 32px;
     cursor: pointer;
     transition: 0.3s ease-in-out all;
   }

@@ -14,19 +14,19 @@ import FooterIkon from "./ReusableComponents/FooterIkon.astro";
       </div>
       <div class="infobox2">
         <p>+45 31 13 84 74</p>
-        <p>contact@rpmrecords.dk</p>
+        <p><a href="mailto:contact@rpmrecords.dk">contact@rpmrecords.dk</a></p>
         <p>CVR: 39029006</p>
-        <p>info@rpmrecords.dk</p>
+        <p><a href="mailto:info@rpmrecords.dk">info@rpmrecords.dk</a></p>
       </div>
     </div>
     <div class="logo_wrapper">
       <img src="/rpm_logo.svg" alt="" class="rpm_logo" />
       <div class="icon_wrapper">
-        <FooterIkon source="/youtubeIkon.svg" altTekst="YouTube ikon" />
-        <FooterIkon source="/facebookIkon.svg" altTekst="Facebook ikon" />
-        <FooterIkon source="/twitterIkon.svg" altTekst="Twitter ikon" />
-        <FooterIkon source="/instagram.svg" altTekst="Instagram ikon" />
-        <FooterIkon source="/linkedInIkon.svg" altTekst="LinkedIn ikon" />
+        <FooterIkon source="/youtubeIkon.svg" altTekst="YouTube ikon" href="https://www.youtube.com/@rpmrecords3593" />
+        <FooterIkon source="/facebookIkon.svg" altTekst="Facebook ikon" href="https://www.facebook.com/rpmrecords.dk/" />
+        <FooterIkon source="/twitterIkon.svg" altTekst="Twitter ikon" href="" />
+        <FooterIkon source="/instagram.svg" altTekst="Instagram ikon" href="https://www.instagram.com/rpmrec/" />
+        <FooterIkon source="/linkedInIkon.svg" altTekst="LinkedIn ikon" href="https://www.linkedin.com/company/rpm-records-dk/?originalSubdomain=dk" />
       </div>
       <p class="accent_color">FIND US ON OUR SOCIALS</p>
     </div>
@@ -36,16 +36,19 @@ import FooterIkon from "./ReusableComponents/FooterIkon.astro";
         <Knap href="/getaquote" tekst="Get a Quote" />
       </div>
       <div class="links">
-        <a href="/">Audio/Artwork</a>
-        <a href="">Vinyl Info</a>
-        <a href="">Sustainability</a>
-        <a href="">About Us</a>
+        <a href="/audioSpecs">Audio/Artwork</a>
+        <a href="/vinyl">Vinyl Info</a>
+        <a href="/sustainability">Sustainability</a>
+        <a href="/about">About Us</a>
       </div>
     </div>
   </div>
 </footer>
 
 <style>
+  a {
+    font-size: var(--p-fontsize);
+  }
   footer {
     z-index: 44444;
     bottom: 0;
@@ -93,7 +96,7 @@ import FooterIkon from "./ReusableComponents/FooterIkon.astro";
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 48px 0 8px 0;
+    padding: 48px 0 16px 0;
     gap: 36px;
   }
 
@@ -118,6 +121,10 @@ import FooterIkon from "./ReusableComponents/FooterIkon.astro";
     display: block;
     height: auto;
     width: 100%;
+  }
+
+  .links a:hover {
+    color: var(--accent-color);
   }
   /* Media query for mobile */
   @media (max-width: 768px) {
@@ -145,7 +152,7 @@ import FooterIkon from "./ReusableComponents/FooterIkon.astro";
     .icon_wrapper {
       width: 100%;
       height: auto;
-      padding: 16px 0 8px 0;
+      padding: 16px 0 16px 0;
     }
 
     .footer_ikon {
