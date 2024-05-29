@@ -1,12 +1,18 @@
 ---
 import FormButton from "../ReusableComponents/FormButton.astro";
+import KnapPrimary from "../ReusableComponents/KnapPrimary.astro";
 ---
 
 <section class="container">
   <h2>Message:</h2>
   <textarea name="" id="" placeholder="Please let us know more about your order"
   ></textarea>
-  <FormButton title="Submit order" />
+  <KnapPrimary
+    tekst="Submit order"
+    farve="roed"
+    tekstFarve="sortTekst"
+    hoverFarve="roedHover"
+  />
 </section>
 <style>
   .container {
@@ -22,6 +28,7 @@ import FormButton from "../ReusableComponents/FormButton.astro";
     border: 1px solid #686868;
     resize: none;
     padding: 10px 5px;
+    margin: 20px 0;
   }
 
   textarea:focus {

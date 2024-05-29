@@ -1,8 +1,18 @@
 ---
+interface Props {
+  href?: string;
+  tekst: string;
+  farve: string;
+  tekstFarve: string;
+  hoverFarve?: string;
+}
 const { href, tekst, farve, tekstFarve, hoverFarve } = Astro.props;
 ---
 
-<div class=`button_wrapper stroke dropShadow ${farve} ${hoverFarve}` id="buttonId">
+<div
+  class=`button_wrapper stroke dropShadow ${farve} ${hoverFarve}`
+  id="buttonId"
+>
   <a href={href}>
     <button class=`quote-button ${tekstFarve}`>{tekst}</button>
   </a>
@@ -41,6 +51,11 @@ const { href, tekst, farve, tekstFarve, hoverFarve } = Astro.props;
 
   .sort {
     background-color: var(--primary-color);
+  }
+
+  .roed:hover {
+    background-color: #f04333;
+    transition: 0.3s ease-in-out all;
   }
 
   .sortTekst {
