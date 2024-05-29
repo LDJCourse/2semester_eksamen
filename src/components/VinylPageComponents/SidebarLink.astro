@@ -39,9 +39,10 @@ const { imgNavn, altTekst, pTekst, idNumber, linkId } = Astro.props;
     cursor: pointer;
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     .vinyl_sidebar a {
-      font-size: 17px;
+      padding: 4px 0;
+      font-size: 16px;
     }
   }
 </style>
