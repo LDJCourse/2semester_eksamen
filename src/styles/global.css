@@ -3,27 +3,25 @@
 :root {
   --primary-color: #161616;
   --secondary-color: #ffffff;
+  --accent-color: #FD8C8A;
+  --tertiary-color: #546f55;
 
   /* Font størrelser */
-  --title-font: ;
-  --h1-desktop: ;
-  --h2-desktop: ;
-  --h3-desktop: ;
-  --p-desktop: clamp(16px, 2vw, 20px);
-  --h1-mobile: ;
-  --h2-mobile: ;
-  --h3-mobile: ;
+  --h1-fontsize: clamp(40px, 4vw, 80px);
+  --h2-fontsize: clamp(24px, 4vw, 34px);
+  --h3-fontsize: clamp(20px, 4vw, 28px);
+  --p-fontsize: clamp(16px, 2vw, 20px);
+  --button-fontsize: 20px;
 
   /* Afstande */
-  --padding-desktop1: 80px;
-  --padding-desktop2: 40px;
-  --padding-desktop3: 32px;
+  --padding-large: 80px;
+  --padding-medium: 40px;
+  --padding-small: 32px;
 
   /* style // border radius */
   --border-radius: 2px;
   --stroke-effect: solid 2px #161616;
   --drop-shadow: 8px 8px #161616;
-
 }
 
 * {
@@ -57,16 +55,16 @@ h1, h2, h3, h4, button {
 }
 
 h1 {
-  font-size: clamp(40px, 4vw, 80px);
+  font-size: var(--h1-fontsize);
 }
 
 h2 {
-  font-size: 34px;
+  font-size: var(--h2-fontsize);
   margin-bottom: 16px;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: var(--h3-fontsize);
   margin-bottom: 16px;
 }
 
@@ -82,7 +80,7 @@ a {
 }
 
 p {
-  font-size: var(--p-desktop);
+  font-size: var(--p-fontsize);
   line-height: 1.6;
   margin-bottom: 16px;
 }
