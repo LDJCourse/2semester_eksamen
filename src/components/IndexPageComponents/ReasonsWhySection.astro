@@ -5,34 +5,19 @@ import Reason from "./Reason.astro";
 <section>
   <h1>WHY RPM RECORDS?</h1>
   <div class="reasons_why_container">
-    <Reason
-      svg="/reason1.svg"
-      title="A sustainable choice"
-      mainText=`We are committed to eco-friendly vinyl production, 
-            minimizing pollution, conserving energy and resources, 
-            and reducing CO2 emissions at every step.`
-      subText=`Here you can order records powered by wind energy, 
+    <Reason svg="/home_illu1.svg" title="A sustainable choice" mainText=`We are committed to eco-friendly vinyl production,
+            minimizing pollution, conserving energy and resources,
+            and reducing CO2 emissions at every step.` subText=`Here you can order records powered by wind energy,
             made from bio-vinyl, printed on wood-free paper with vegan ink
-            and delivered zero-emissions.`
-    />
-    <Reason
-      svg="/reason2.svg"
-      title="Trusted partner worldwide"
-      mainText=`RPM Records serves a diverse clientele globally, 
-            from independent artists to major labels, offering fast, 
-            high-quality service across North America, Europe, and Asia.`
-      subText=`Our commitment to equal standards and flexibility 
-            is valued by all our clients, regardless of size or origin.`
-    />
-    <Reason
-      svg="/reason3.svg"
-      title="Devoted to quality"
-      mainText=`RPM Records is devoted to the enduring vinyl tradition, 
-            modern technology and deep understanding of production methods. `
-      subText=`Here you can order records powered by wind energy, 
+            and delivered zero-emissions.` />
+    <Reason svg="/home_illu2.svg" title="Trusted partner worldwide" mainText=`RPM Records serves a diverse clientele globally,
+            from independent artists to major labels, offering fast,
+            high-quality service across North America, Europe, and Asia.` subText=`Our commitment to equal standards and flexibility
+            is valued by all our clients, regardless of size or origin.` />
+    <Reason svg="/home_illu3.svg" title="Devoted to quality" mainText=`RPM Records is devoted to the enduring vinyl tradition,
+            modern technology and deep understanding of production methods. ` subText=`Here you can order records powered by wind energy,
             made from bio-vinyl, printed on wood-free paper with vegan ink
-            and delivered zero-emissions.`
-    />
+            and delivered zero-emissions.` />
   </div>
 </section>
 <style>
@@ -40,14 +25,16 @@ import Reason from "./Reason.astro";
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 32px;
   }
   h1 {
     text-align: center;
+    color: var(--secondary-color);
   }
 
   section {
-    background: var(--tertiary-color);
-    padding: 20px;
+    background: var(--primary-color);
+    padding: 80px 40px;
   }
 
   @media (min-width: 768px) {
