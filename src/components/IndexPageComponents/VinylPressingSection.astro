@@ -5,31 +5,12 @@ import KnapPrimary from "../ReusableComponents/KnapPrimary.astro";
 <section class="container">
   <div class="text-section">
     <h1>COPENHAGEN VINYL PRESSING</h1>
-    <p>
-      As a small record-pressing plant, we handle each order with meticulous
-      precision. Our team listens to records throughout production and visually
-      inspects every single one. We adapt our services as required and respond
-      promptly and efficiently.
-    </p>
-    <p>
-      RPM employees are passionate vinyl enthusiasts, DJs, musicians, and
-      producers with diverse tastes in music.We are dedicated to upholding the
-      highest quality standards, delivering warm, natural sound, and promoting
-      sustainable production practices.
-    </p>
-    <KnapPrimary
-      href="/vinyl"
-      tekst="Read More"
-      farve="roed"
-      tekstFarve="sortTekst"
-      hoverFarve="roedHover"
-    />
+    <p>As a small record-pressing plant, we handle each order with meticulous precision. Our team listens to records throughout production and visually inspects every single one. We adapt our services as required and respond promptly and efficiently.</p>
+    <p>RPM employees are passionate vinyl enthusiasts, DJs, musicians, and producers with diverse tastes in music.We are dedicated to upholding the highest quality standards, delivering warm, natural sound, and promoting sustainable production practices.</p>
+    <KnapPrimary href="/vinyl" tekst="Read More" farve="roed" tekstFarve="sortTekst" hoverFarve="roedHover" />
   </div>
   <div class="image-section">
-    <img
-      src="/vinylpressing.webp"
-      alt="billede af CEO og COO foran en bunke vinyler"
-    />
+    <img src="/vinylpressing.webp" alt="billede af CEO og COO foran en bunke vinyler" />
   </div>
 </section>
 
@@ -38,10 +19,9 @@ import KnapPrimary from "../ReusableComponents/KnapPrimary.astro";
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    gap: 32px;
     margin: 0 auto;
     padding: 20px;
-    height: 100vh;
   }
 
   .text-section,
@@ -105,6 +85,7 @@ import KnapPrimary from "../ReusableComponents/KnapPrimary.astro";
       justify-content: space-around;
       align-items: center;
       width: 100%;
+      height: 100vh;
     }
 
     .text-section {
