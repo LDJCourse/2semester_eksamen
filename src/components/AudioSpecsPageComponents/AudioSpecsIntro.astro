@@ -1,5 +1,5 @@
 ---
-import LinkButton from "../ReusableComponents/LinkButton.astro";
+import Knap from "../ReusableComponents/KnapPrimary.astro";
 ---
 
 <div class="audio_specs_container">
@@ -8,7 +8,7 @@ import LinkButton from "../ReusableComponents/LinkButton.astro";
     <p>An inevitable start for an excellent sounding record is always the quality of the program material.</p>
     <p>Below you will find the information about vinyl mastering, lacquer cutting, and recommended playback times for 12-inch or 7-inch records.</p>
     <p>Please read the audio requirements and recommendations carefully to ensure high-fidelity record pressing.</p>
-    <LinkButton title="Get a Quote" />
+    <Knap href="" tekst="Read More" farve="roed" tekstFarve="sortTekst" />
   </div>
   <div class="img_container">
     <img src="/audiospecintro.jpg" alt="" />
@@ -23,7 +23,7 @@ import LinkButton from "../ReusableComponents/LinkButton.astro";
     padding: 80px 16px;
     gap: 32px;
     background-color: var(--primary-color);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     height: auto;
     width: 100%;
   }
