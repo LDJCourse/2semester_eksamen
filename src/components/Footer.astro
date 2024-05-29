@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Knap from "./ReusableComponents/KnapAccent.astro";
 ---
 
 <footer>
@@ -31,7 +32,7 @@ import "../styles/global.css";
     <div class="links_wrapper">
       <div class="footer_button_container">
         <p>Ready to order?</p>
-        <div class="button"></div>
+        <Knap href="/getaquote" tekst="Get a Quote" />
       </div>
       <div class="links">
         <a href="/">Audio/Artwork</a>
@@ -50,6 +51,7 @@ import "../styles/global.css";
     left: 0;
     height: auto;
     width: 100%;
+    background-color: var(--primary-color);
   }
 
   .footer_container {
@@ -58,6 +60,7 @@ import "../styles/global.css";
     margin: auto;
     padding: 80px 32px;
     max-width: 1920px;
+    color: var(--secondary-color);
   }
 
   .footer_info {
@@ -79,7 +82,7 @@ import "../styles/global.css";
   }
 
   .rpm_logo {
-    width: 100%;
+    width: 90%;
     max-width: 344px;
     height: auto;
     max-height: 271px;

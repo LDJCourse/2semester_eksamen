@@ -1,0 +1,36 @@
+---
+const { href, tekst } = Astro.props;
+---
+
+<div class="button_wrapper stroke dropShadow" id="buttonId">
+  <a href={href}>
+    <button class="quote-button">{tekst}</button>
+  </a>
+  <img src="/arrow-right.svg" alt="" class="button-icon hide" id="arrow_icon" />
+</div>
+
+<style>
+  .button_wrapper {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: auto;
+    transition: 0.3s ease-in-out all;
+  }
+
+  .button_wrapper:hover,
+  .button_wrapper:focus {
+    background-color: #f04333;
+    transition: 0.3s ease-in-out all;
+  }
+</style>

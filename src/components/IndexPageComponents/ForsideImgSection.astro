@@ -6,7 +6,7 @@
   <video autoplay loop muted>
     <source src="https://saaa.dk/kea/10_eksamen/rpm_herovideo.webm?fbclid=IwZXh0bgNhZW0CMTAAAR3thma8dF34XzjqtUgkAa0uon5Hrs9BlRl5RESCVCv95EMUuqzF8Ysx-lg_aem_AZLbxpczYLp_i1PvIpgw1I20AYnmoPnKMgQPSnid7D_0PFzyQYH6FFBACHz11-oArT7jtuTFLituNnwx4zj8Ojo3" type="" />
   </video>
-  <div class="text_container"></div>
+  <div class="video_overlay"></div>
 </div>
 
 <style>
@@ -20,15 +20,29 @@
     z-index: -1;
   }
 
+  .video_overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: #161616;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+  }
+
+  .video_background:before {
+    background: rgba(255, 0, 255, 0.2);
+  }
+
+  .text_container {
+    display: flex;
+    z-index: 3;
+    top: 0;
+  }
+
   .img_container {
     position: relative;
     max-width: 100%;
-  }
-
-  img {
-    width: 100vw;
-    height: 241px;
-    /* object-fit: cover; */
   }
 
   .img_cover {
@@ -37,6 +51,9 @@
     height: 241px;
     opacity: 60%;
     background-color: rgba(0, 0, 0, 0.8); /* Sort overlay med 50% gennemsigtighed */
+  }
+
+  @media (max-width: 768px) {
   }
 </style>
 
