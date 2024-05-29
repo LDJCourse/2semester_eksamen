@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import Knap from "../components/ReusableComponents/LinkButton.astro";
+import Knap from "./ReusableComponents/KnapAccent.astro";
 ---
 
 <footer>
@@ -32,7 +32,7 @@ import Knap from "../components/ReusableComponents/LinkButton.astro";
     <div class="links_wrapper">
       <div class="footer_button_container">
         <p>Ready to order?</p>
-        <Knap />
+        <Knap href="/getaquote" tekst="Get a Quote" />
       </div>
       <div class="links">
         <a href="/">Audio/Artwork</a>
@@ -82,7 +82,7 @@ import Knap from "../components/ReusableComponents/LinkButton.astro";
   }
 
   .rpm_logo {
-    width: 100%;
+    width: 90%;
     max-width: 344px;
     height: auto;
     max-height: 271px;
