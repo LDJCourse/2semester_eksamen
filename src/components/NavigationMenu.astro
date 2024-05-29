@@ -56,7 +56,7 @@ import "../styles/global.css";
     // if (link.href.includes(`${activeLink}`)) {
     //   link.classList.add("active_link");
     // }
-    if (linkPath === activeLink) {
+    if (linkPath === activeLink && linkPath !== "/") {
       link.classList.add("active_link");
     }
   });
@@ -67,8 +67,9 @@ import "../styles/global.css";
   }
   @media (min-width: 768px) {
     .active_link {
-      border-bottom: 3px solid white;
+      border-bottom: 3px solid var(--accent-color);
       padding-bottom: 10px;
+      color: var(--accent-color) !important;
     }
     .navbar {
       display: block;
