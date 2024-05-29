@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+
+// Importer komponenter her
+import NavigationMenu from "../components/NavigationMenu.astro";
+import MobileNav from "../components/MobileNav.astro";
+import SideBar from "../components/VinylPageComponents/SideBar.astro";
+import SectionVinyl from "../components/VinylPageComponents/Section.astro";
+import SidebarLink from "../components/VinylPageComponents/SidebarLink.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="RPM Records">
+  <!-- html kode skrives inde i main -->
+  <main>
+    <NavigationMenu />
+    <MobileNav />
+    <!-- Indsæt komponenter her  -->
+    <div class="error_wrapper">
+      <h1 class="mega_title">404</h1>
+      <h3>Whoops, something went wrong there!</h3>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .error_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .mega_title {
+    font-size: clamp(200px, 80vw, 400px);
+    color: var(--accent-color);
+  }
+
+  h3 {
+    color: var(--secondary-color);
+  }
+</style>
