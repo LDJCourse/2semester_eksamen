@@ -41,7 +41,6 @@ import RecycledPlasticSection from "../components/SustainabilityPageComponents/R
         const elementTop = reveals[i].getBoundingClientRect().top;
         const elementVisible = 150;
 
-        console.log("test " + elementTop);
         if (elementTop < windowHeight - elementVisible) {
           reveals[i].classList.add("active");
         }
