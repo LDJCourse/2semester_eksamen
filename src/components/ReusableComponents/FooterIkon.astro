@@ -1,0 +1,21 @@
+---
+const { source, altTekst } = Astro.props;
+---
+
+<div class="ikon_wrapper">
+  <img src={source} alt={altTekst} class="footer_ikon" />
+</div>
+
+<style>
+  .ikon_wrapper {
+    width: 100%;
+    height: auto;
+  }
+  .footer_ikon {
+    height: auto;
+    max-height: 47px;
+    min-width: 40px;
+    width: 100%;
+    max-width: 48px;
+  }
+</style>
