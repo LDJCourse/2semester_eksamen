@@ -12,7 +12,7 @@ const data = await res.json();
   </div>
   <div></div>
 
-  <swiper-container class="mySwiper" navigation="true" color>
+  <swiper-container class="mySwiper" navigation="true" color="">
     {
       data.map(t => (
         <swiper-slide>
@@ -84,12 +84,6 @@ const data = await res.json();
     align-items: center;
   }
 
-  .swiper-button-prev {
-    color: red;
-  }
-  .swiper-button-next {
-    color: #000;
-  }
   @media (min-width: 768px) {
     .container {
       justify-content: center;
