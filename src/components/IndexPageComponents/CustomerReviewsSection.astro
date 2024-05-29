@@ -27,7 +27,7 @@ import CustomerReview from "./CustomerReview.astro";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
   }
 
   .mobile_review_wrapper {
@@ -39,13 +39,15 @@ import CustomerReview from "./CustomerReview.astro";
     height: auto;
     gap: 32px;
   }
-
-  .gStars {
-    width: 80%;
-  }
-
   .review_desktop {
     display: none;
+  }
+  .gStars {
+    width: 50%;
+  }
+
+  .gReviewMobile {
+    width: 100%;
   }
 
   h1 {
@@ -63,6 +65,9 @@ import CustomerReview from "./CustomerReview.astro";
     }
     .mobile_review_wrapper {
       display: none;
+    }
+    .review_desktop {
+      display: block;
     }
   }
 </style>
