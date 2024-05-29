@@ -5,13 +5,9 @@
 <nav class="">
   <div class="mobileMenuWrapper">
     <div class="burger_wrapper">
-      <div class="logo">RPM Records</div>
+      <div class="logo_text">RPM RECORDS</div>
       <div class="toggle">
-        <img
-          src="../ikoner/burger-menu.svg"
-          alt="burger menu"
-          class="burger_ikon"
-        />
+        <img src="../ikoner/burger-menu.svg" alt="burger menu" class="burger_ikon" />
       </div>
     </div>
 
@@ -62,8 +58,13 @@
     display: block;
   }
 
-  .logo {
-    font-size: 40px;
+  .logo_text {
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    text-decoration: none;
+    white-space: nowrap;
     color: var(--accent-color);
   }
 
@@ -138,7 +139,7 @@
     right: 0;
     overflow: auto;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1099px) {
     .toggle,
     .mobileMenuWrapper {
       display: none;
