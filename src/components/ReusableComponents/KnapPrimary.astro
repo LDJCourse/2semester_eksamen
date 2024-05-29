@@ -9,6 +9,16 @@ interface Props {
 const { href, tekst, farve, tekstFarve, hoverFarve } = Astro.props;
 ---
 
+<a
+  class=`button_wrapper stroke dropShadow ${farve} ${hoverFarve}`
+  id="buttonId"
+  href={href}
+>
+  <button class=`quote-button ${tekstFarve}`>{tekst}</button>
+</a>
+<img src="/arrow-right.svg" alt="" class="button-icon hide" id="arrow_icon" />
+
+<!-- 
 <div
   class=`button_wrapper stroke dropShadow ${farve} ${hoverFarve}`
   id="buttonId"
@@ -17,10 +27,11 @@ const { href, tekst, farve, tekstFarve, hoverFarve } = Astro.props;
     <button class=`quote-button ${tekstFarve}`>{tekst}</button>
   </a>
   <img src="/arrow-right.svg" alt="" class="button-icon hide" id="arrow_icon" />
-</div>
+</div> -->
 
 <style>
   .button_wrapper {
+    all: unset;
     display: flex;
     gap: 8px;
     align-items: center;
@@ -37,6 +48,7 @@ const { href, tekst, farve, tekstFarve, hoverFarve } = Astro.props;
 
   .quote-button {
     color: var(--secondary-color);
+    cursor: pointer;
   }
 
   .button_wrapper:hover,

@@ -7,10 +7,12 @@ import "../styles/global.css";
     <a href="/" class="logo">RPM RECORDS</a>
     <ul class="nav-links">
       <li class="nav-item">
-        <a href="#">AUDIO/ARTWORK <span class="dropdown-icon">&#9660;</span></a>
+        <a href="/dd"
+          >AUDIO/ARTWORK <span class="dropdown-icon">&#9660;</span></a
+        >
         <ul class="dropdown">
           <li><a href="/audioSpecs">AUDIO</a></li>
-          <li><a href="/#">ARTWORK</a></li>
+          <li><a href="/artwork">ARTWORK</a></li>
         </ul>
       </li>
       <li class="nav-item"><a href="/vinyl">VINYL INFO</a></li>
@@ -19,19 +21,55 @@ import "../styles/global.css";
       </li>
       <li class="nav-item"><a href="/about">ABOUT US</a></li>
     </ul>
-    <div class="button_wrapper" id="buttonId">
-      <a href="/getaquote">
-        <button class="quote-button">Get a Quote</button>
-      </a>
-      <img src="/arrow-right.svg" alt="" class="button-icon hide" id="arrow_icon" />
-    </div>
+
+    <a class="button_wrapper" id="buttonId" href="/getaquote">
+      <button class="quote-button">Get a Quote</button>
+      <img
+        src="/arrow-right.svg"
+        alt=""
+        class="button-icon hide"
+        id="arrow_icon"
+      />
+    </a>
   </div>
 </nav>
+
+<script>
+  const buttonArrow = document.querySelector("#buttonId");
+  const arrowIcon = document.querySelector("#arrow_icon");
+  buttonArrow.addEventListener("mouseover", hideRemove);
+
+  function hideRemove() {
+    arrowIcon.classList.remove("hide");
+    buttonArrow.addEventListener("mouseout", addRemove);
+  }
+  function addRemove() {
+    arrowIcon.classList.add("hide");
+  }
+
+  const activeLink = window.location.pathname;
+  // console.log("test " + activeLink);
+  // Add underline on active link in navigation bar
+
+  document.querySelectorAll("a").forEach((link) => {
+    const linkPath = new URL(link.href).pathname;
+    // if (link.href.includes(`${activeLink}`)) {
+    //   link.classList.add("active_link");
+    // }
+    if (linkPath === activeLink) {
+      link.classList.add("active_link");
+    }
+  });
+</script>
 <style>
   .navbar {
     display: none;
   }
   @media (min-width: 768px) {
+    .active_link {
+      border-bottom: 3px solid white;
+      padding-bottom: 10px;
+    }
     .navbar {
       display: block;
       position: sticky;
@@ -125,6 +163,10 @@ import "../styles/global.css";
       transition: 0.3s ease-in-out all;
     }
 
+    button {
+      cursor: pointer;
+    }
+
     /*.quote-button {
       background-color: var(--accent-color);
       color: #fff;
@@ -169,17 +211,3 @@ import "../styles/global.css";
 </style>
 
 <!-- Eksempel på komponent  -->
-
-<script>
-  const buttonArrow = document.querySelector("#buttonId");
-  const arrowIcon = document.querySelector("#arrow_icon");
-  buttonArrow.addEventListener("mouseover", hideRemove);
-
-  function hideRemove() {
-    arrowIcon.classList.remove("hide");
-    buttonArrow.addEventListener("mouseout", addRemove);
-  }
-  function addRemove() {
-    arrowIcon.classList.add("hide");
-  }
-</script>
