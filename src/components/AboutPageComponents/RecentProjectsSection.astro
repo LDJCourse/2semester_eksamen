@@ -14,7 +14,10 @@ const data = await res.json();
     {
       data.map((t) => (
         <div class="image_container">
-          <img src={t.image} alt="" />
+          <img
+            src={t.image}
+            alt="Et billede der visr eksempel på seneste projekter"
+          />
         </div>
       ))
     }

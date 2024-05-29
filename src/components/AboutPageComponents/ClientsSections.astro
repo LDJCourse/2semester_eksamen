@@ -24,7 +24,7 @@ const data = await res.json();
       data.map((t) => (
         <swiper-slide>
           <div class="image_container">
-            <img src={t.image} alt="" />
+            <img src={t.image} alt="Billede af artist" />
             <h3>{t.name}</h3>
           </div>
         </swiper-slide>
@@ -94,7 +94,6 @@ const data = await res.json();
     .container {
       justify-content: center;
       align-items: center;
-      height: 80vh;
     }
 
     .clients_wrapper {
