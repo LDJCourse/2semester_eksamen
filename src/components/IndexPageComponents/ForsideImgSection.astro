@@ -2,16 +2,22 @@
 
 ---
 
-<div class="">
-  <div class="img_container">
-    <div class="img_cover"></div>
-    <img src="/frontpageimg.png" alt="" />
-  </div>
+<div class="video_background">
+  <video autoplay loop muted>
+    <source src="https://saaa.dk/kea/10_eksamen/rpm_herovideo.webm?fbclid=IwZXh0bgNhZW0CMTAAAR3thma8dF34XzjqtUgkAa0uon5Hrs9BlRl5RESCVCv95EMUuqzF8Ysx-lg_aem_AZLbxpczYLp_i1PvIpgw1I20AYnmoPnKMgQPSnid7D_0PFzyQYH6FFBACHz11-oArT7jtuTFLituNnwx4zj8Ojo3" type="" />
+  </video>
+  <div class="text_container"></div>
 </div>
 
 <style>
-  div {
-    width: 100%;
+  .video_background {
+    width: 100vw;
+    /*height: calc(100vh - 80px);*/
+    height: 80vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    z-index: -1;
   }
 
   .img_container {
@@ -30,12 +36,7 @@
     max-width: 100%;
     height: 241px;
     opacity: 60%;
-    background-color: rgba(
-      0,
-      0,
-      0,
-      0.8
-    ); /* Sort overlay med 50% gennemsigtighed */
+    background-color: rgba(0, 0, 0, 0.8); /* Sort overlay med 50% gennemsigtighed */
   }
 </style>
 
