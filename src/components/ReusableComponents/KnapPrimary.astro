@@ -1,10 +1,10 @@
 ---
-const { href, tekst } = Astro.props;
+const { href, tekst, farve, tekstFarve } = Astro.props;
 ---
 
-<div class="button_wrapper stroke dropShadow" id="buttonId">
+<div class=`button_wrapper stroke dropShadow ${farve}` id="buttonId">
   <a href={href}>
-    <button class="quote-button">{tekst}</button>
+    <button class=`quote-button ${tekstFarve}`>{tekst}</button>
   </a>
   <img src="/arrow-right.svg" alt="" class="button-icon hide" id="arrow_icon" />
 </div>
@@ -15,7 +15,6 @@ const { href, tekst } = Astro.props;
     gap: 8px;
     align-items: center;
     justify-content: center;
-    background-color: var(--accent-color);
     font-family: "Fjalla One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -23,12 +22,11 @@ const { href, tekst } = Astro.props;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    margin-left: auto;
     transition: 0.3s ease-in-out all;
   }
 
-  button {
-    color: var(--primary-color);
+  .quote-button {
+    color: var(--secondary-color);
   }
 
   .button_wrapper:hover,
@@ -37,9 +35,26 @@ const { href, tekst } = Astro.props;
     transition: 0.3s ease-in-out all;
   }
 
+  .roed {
+    background-color: var(--accent-color);
+  }
+
+  .sort {
+    background-color: var(--primary-color);
+  }
+
+  .sortTekst {
+    color: var(--primary-color);
+  }
+
+  .hvidTekst {
+    color: var(--secondary-color);
+  }
+
   @media (min-width: 768px) {
     .button_wrapper {
-      max-width: 180px;
+      max-width: fit-content;
+      min-width: 180px;
     }
   }
 </style>
