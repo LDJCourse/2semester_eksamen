@@ -1,27 +1,20 @@
 ---
 const apikey = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlmY2F3ZGx1Y29ib2hmbm1yeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU5NDU3OTcsImV4cCI6MjAzMTUyMTc5N30.Tncixva_zJhjtqjW-cBPr9RFrDbPfLxGtp5c9EhnIn4`;
 
-const res = await fetch(
-  `https://ifcawdlucobohfnmrxmg.supabase.co/rest/v1/clients?apikey=${apikey}`
-);
+const res = await fetch(`https://ifcawdlucobohfnmrxmg.supabase.co/rest/v1/clients?apikey=${apikey}`);
 const data = await res.json();
 ---
 
 <section class="container">
   <div class="clients_wrapper">
     <h1>CLIENTS</h1>
-    <p>
-      RPM Records caters to diverse clients globally, from indie artists to
-      major labels and distributors across North America, Europe, and Asia.
-      We're known for our fast, top-notch service and unwavering fairness to
-      all, irrespective of scale or stature.
-    </p>
+    <p>RPM Records caters to diverse clients globally, from indie artists to major labels and distributors across North America, Europe, and Asia. We're known for our fast, top-notch service and unwavering fairness to all, irrespective of scale or stature.</p>
   </div>
   <div></div>
 
   <swiper-container class="mySwiper" navigation="true" color>
     {
-      data.map((t) => (
+      data.map(t => (
         <swiper-slide>
           <div class="image_container">
             <img src={t.image} alt="Billede af artist" />
@@ -40,7 +33,7 @@ const data = await res.json();
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 20px;
+    padding: 80px 20px;
     color: var(--secondary-color);
   }
 
@@ -119,6 +112,4 @@ const data = await res.json();
   }
 </style>
 
-<script
-  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
-></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
