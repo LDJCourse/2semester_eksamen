@@ -4,10 +4,12 @@ import "../styles/global.css";
 
 <nav class="navbar">
   <div class="navbar-container">
-    <a href="/index" class="logo">RPM RECORDS</a>
+    <a href="/" class="logo">RPM RECORDS</a>
     <ul class="nav-links">
       <li class="nav-item">
-        <a href="/audioSpecs">AUDIO/ARTWORK <span class="dropdown-icon">&#9660;</span></a>
+        <a href="/audioSpecs"
+          >AUDIO/ARTWORK <span class="dropdown-icon">&#9660;</span></a
+        >
         <ul class="dropdown">
           <li><a href="/audioSpecs">AUDIO</a></li>
           <li><a href="/artwork">ARTWORK</a></li>
@@ -22,7 +24,12 @@ import "../styles/global.css";
 
     <a class="button_wrapper" id="buttonId" href="/getaquote">
       <button class="quote-button">Get a Quote</button>
-      <img src="/arrow-right.svg" alt="" class="button-icon hide" id="arrow_icon" />
+      <img
+        src="/arrow-right.svg"
+        alt=""
+        class="button-icon hide"
+        id="arrow_icon"
+      />
     </a>
   </div>
 </nav>
@@ -44,7 +51,7 @@ import "../styles/global.css";
   // console.log("test " + activeLink);
   // Add underline on active link in navigation bar
 
-  document.querySelectorAll("a").forEach(link => {
+  document.querySelectorAll("a").forEach((link) => {
     const linkPath = new URL(link.href).pathname;
     // if (link.href.includes(`${activeLink}`)) {
     //   link.classList.add("active_link");
