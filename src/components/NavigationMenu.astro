@@ -46,20 +46,47 @@ import "../styles/global.css";
   function addRemove() {
     arrowIcon.classList.add("hide");
   }
-
-  const activeLink = window.location.pathname;
-  // console.log("test " + activeLink);
+  // // console.log("test " + activeLink);
   // Add underline on active link in navigation bar
 
-  document.querySelectorAll("a").forEach((link) => {
-    const linkPath = new URL(link.href).pathname;
-    // if (link.href.includes(`${activeLink}`)) {
-    //   link.classList.add("active_link");
-    // }
-    if (linkPath === activeLink && linkPath !== "/") {
-      link.classList.add("active_link");
-    }
+  // document.querySelectorAll("a").forEach((link) => {
+  //   const activeLink = window.location.pathname;
+  //   const linkPath = new URL(link.href).pathname;
+
+  //   if (linkPath === activeLink && linkPath !== "/") {
+  //     link.classList.add("active_link");
+  //   }
+  // });
+  document.addEventListener("DOMContentLoaded", () => {
+    const url = "https://master--amazing-llama-bc138a.netlify.app/";
+    // const activeLink = window.location.pathname;
+    const activeLink = url;
+
+    document.querySelectorAll("a").forEach((link) => {
+      const linkPath = new URL(link.href).pathname;
+
+      if (linkPath === activeLink && linkPath !== url) {
+        link.classList.add("active_link");
+      }
+    });
   });
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   const activeLink = window.location.pathname;
+  //   console.log("Current path:", activeLink);
+
+  //   document.querySelectorAll("a").forEach((link) => {
+  //     const linkPath = new URL(
+  //       link.getAttribute("href"),
+  //       window.location.origin
+  //     ).pathname;
+  //     console.log("Link path:", linkPath);
+
+  //     if (linkPath === activeLink || (linkPath === "/" && activeLink === "/")) {
+  //       console.log("Active link found:", link.href);
+  //       link.classList.add("active_link");
+  //     }
+  //   });
+  // });
 </script>
 <style>
   .navbar {
