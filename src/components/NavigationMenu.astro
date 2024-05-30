@@ -49,25 +49,25 @@ import "../styles/global.css";
   // // console.log("test " + activeLink);
   // Add underline on active link in navigation bar
 
-  document.querySelectorAll("a").forEach((link) => {
-    const activeLink = window.location.pathname;
-    const linkPath = new URL(link.href).pathname;
-
-    if (linkPath === activeLink && linkPath !== "/") {
-      link.classList.add("active_link");
-    }
-  });
-  // document.addEventListener("DOMContentLoaded", () => {
+  // document.querySelectorAll("a").forEach((link) => {
   //   const activeLink = window.location.pathname;
+  //   const linkPath = new URL(link.href).pathname;
 
-  //   document.querySelectorAll("a").forEach((link) => {
-  //     const linkPath = new URL(link.href).pathname;
-
-  //     if (linkPath === activeLink && linkPath !== "/") {
-  //       link.classList.add("active_link");
-  //     }
-  //   });
+  //   if (linkPath === activeLink && linkPath !== "/") {
+  //     link.classList.add("active_link");
+  //   }
   // });
+  document.addEventListener("DOMContentLoaded", () => {
+    const activeLink = window.location.pathname;
+
+    document.querySelectorAll("a").forEach((link) => {
+      const linkPath = new URL(link.href).pathname;
+
+      if (linkPath === activeLink && linkPath !== "/") {
+        link.classList.add("active_link");
+      }
+    });
+  });
   // document.addEventListener("DOMContentLoaded", () => {
   //   const activeLink = window.location.pathname;
   //   console.log("Current path:", activeLink);
