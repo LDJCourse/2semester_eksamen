@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');*/
 
 @font-face {
   font-family: 'fjalla_one';
-  src: url('fonts/fjallaone-regular-webfont.woff2') format('woff2');
+  src: url('../fonts/fjallaone-regular-webfont.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'montserrat_bold';
-  src: url('fonts/Montserrat-Bold.woff2') format('woff2');
+  src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
@@ -88,7 +88,7 @@ video {
 
 
 h1, h2, h3, h4, button {
-  font-family: 'fjalla_one', sans-serif;
+  font-family: "fjalla_one", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
