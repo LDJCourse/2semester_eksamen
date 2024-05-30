@@ -4,7 +4,7 @@
 
 <div class="container">
   <div class="img_container">
-    <img src="/about1.webp" alt="Et billede af en RPM RECORDS medarbejder der står og fikser noget ved vinyl maskinen" />
+    <img src="../about1.webp" alt="Et billede af en RPM RECORDS medarbejder der står og fikser noget ved vinyl maskinen" />
   </div>
   <section class="text_section dropShadow stroke">
     <h2>OUR STORY</h2>
@@ -20,11 +20,15 @@
     color: var(--primary-color);
   }
   .container {
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    padding: 8px;
+    padding: 40px 8px;
     background: var(--tertiary-color);
     background-image: url("../img/backgrounds/rpm_purple_bg.webp");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .img_container {
@@ -43,7 +47,7 @@
 
   .text_section {
     padding: 16px;
-    width: 90%;
+    width: 100%;
     background: var(--secondary-color);
     color: var(--primary-color);
     line-height: 1.6;
@@ -55,12 +59,14 @@
     .container {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      padding: 160px 32px;
     }
     .text_section {
       justify-self: center;
       align-self: center;
       padding: 24px 40px;
       margin-right: 80px;
+      width: 90%;
     }
     .img_container {
       width: 100%;
