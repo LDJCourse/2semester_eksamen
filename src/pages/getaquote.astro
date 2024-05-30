@@ -19,10 +19,12 @@ import Footer from "../components/Footer.astro";
   <!-- html kode skrives inde i main -->
   <NavigationMenu />
   <MobileNav />
-  <main class="container">
-    <!-- Indsæt komponenter her  -->
-    <div>
-      <h1 id="getaquote">GET A QUOTE</h1>
+  <div class="quote_top_wrapper">
+    <h1 id="getaquote">GET A QUOTE</h1>
+  </div>
+  <div>
+    <main class="container">
+      <!-- Indsæt komponenter her  -->
 
       <!-- <PickAFormat /> -->
       <p>
@@ -44,17 +46,33 @@ import Footer from "../components/Footer.astro";
       <h2>Contact Information</h2>
       <FormSection />
       <TextareaField />
-    </div>
-  </main>
+    </main>
+  </div>
 </Layout>
+<Footer />
 
 <style>
   .container {
+    display: flex;
+    flex-direction: column;
     background-image: url("../getaquotebg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     object-fit: cover;
     color: var(--secondary-color);
+  }
+
+  .quote_top_wrapper {
+    background-image: url("../img/getaquote_imgs/getaquote_top_img.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    min-height: 360px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   h2 {
@@ -70,8 +88,8 @@ import Footer from "../components/Footer.astro";
 
   #getaquote {
     text-align: center;
-    margin: 100px 0;
-    font-size: 60px;
+    font-size: clamp(40px, 6vw, 96px);
+    color: var(--secondary-color);
   }
 
   p {
@@ -87,9 +105,10 @@ import Footer from "../components/Footer.astro";
   @media (min-width: 768px) {
     .container {
       display: flex;
-      /* flex-direction: column; */
+      flex-direction: column;
       justify-content: space-around;
       width: 100%;
+      padding: 40px 160px;
     }
 
     span {
