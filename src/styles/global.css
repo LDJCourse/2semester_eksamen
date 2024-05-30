@@ -1,29 +1,29 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');*/
 
 @font-face {
-  font-family: 'fjalla_one';
+  font-family: "fjalla_one";
   src: url('../fonts/fjallaone-regular-webfont.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'montserrat_bold';
+  font-family: "montserrat_bold";
   src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'montserrat_regular';
-  src: url('fonts/Montserrat-Regular.woff2') format('woff2');
+  font-family: "montserrat_regular";
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'montserrat_italic';
-  src: url('fonts/Montserrat-Italic.woff2') format('woff2');
+  font-family: "montserrat_italic";
+  src: url('../fonts/Montserrat-Italic.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
@@ -108,7 +108,7 @@ h3 {
 }
 
 p, a, ul, li, .links, .menuButton {
-  font-family: 'montserrat_regular', sans-serif;
+  font-family: "montserrat_regular", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
