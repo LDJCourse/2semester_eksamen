@@ -7,13 +7,17 @@
     <div class="burger_wrapper">
       <div class="logo_text">RPM RECORDS</div>
       <div class="toggle">
-        <img src="../ikoner/burger-menu.svg" alt="burger menu" class="burger_ikon" />
+        <img
+          src="../ikoner/burger-menu.svg"
+          alt="burger menu"
+          class="burger_ikon"
+        />
       </div>
     </div>
 
     <div class="menu">
       <ul>
-        <li><a href="/index">RPM Records</a></li>
+        <li><a href="/">RPM Records</a></li>
         <li><a href="/audioSpecs">Audio/Artwork</a></li>
         <li><a href="/vinyl">Vinyl Info</a></li>
         <li><a href="/sustainability">Sustainability</a></li>
@@ -22,6 +26,7 @@
       </ul>
     </div>
   </div>
+  <div class="mobile_nav_box"></div>
 </nav>
 
 <style>
@@ -138,6 +143,11 @@
   .menu.active {
     right: 0;
     overflow: auto;
+  }
+
+  .mobile_nav_box {
+    height: 80px;
+    background-color: black;
   }
   @media (min-width: 1099px) {
     .toggle,
