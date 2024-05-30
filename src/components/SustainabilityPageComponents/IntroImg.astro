@@ -3,7 +3,7 @@
 ---
 
 <div>
-  <p>SUSTAINABLE RECORD PRESSING</p>
+  <h1>SUSTAINABLE RECORD PRESSING</h1>
 </div>
 <style>
   .link-card {
@@ -11,24 +11,26 @@
 
   /* Der er sat width på her så word-break kan skille sætningen ad i tre ord på tre linjer */
   /* word-break virker kun hvis sætningen er har længere width end den container den er i */
-  p {
+  h1 {
     width: auto;
     line-height: 1.5;
     word-break: normal;
     padding: 0 20px;
-    font-size: 44px;
+    text-align: center;
+    font-size: clamp(40px, 4vw, 96px);
     color: var(--secondary-color);
   }
 
   div {
     background-image: url("/sustainableintroimg.webp");
     width: 100%;
+    height: auto;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     display: flex;
     flex-direction: column;
     justify-content: end;
-    margin: 100px 0;
+    padding: 80px 0;
   }
 
   @media (min-width: 768px) {

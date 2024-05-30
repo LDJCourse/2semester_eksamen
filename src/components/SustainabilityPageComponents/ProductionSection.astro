@@ -3,28 +3,34 @@
 ---
 
 <div class="container">
-  <section class="text_section">
-    <h2>CIRCULAR SUSTAINABLE PRODUCTION</h2>
-    <p>Our circular production model follows three core principles: minimum waste, efficiency and quality. Therefore, we recycle 98% of plastic waste in production. Our water management system diminishes wastage and environmental impacts while re-using water continuously in record production.</p>
-    <p>The modern automatic thermo-molding press is energy efficient and faster compared to old presses. That allows consistent quality from the first to the last record, using less energy in less time.</p>
-    <p>We value skills and experience on the manufacturing floor. Thus, our production team is mindful of sustainability and operates at 95% success rate, minimum waste or re-work.</p>
-  </section>
+  <img src="../img/sustainability_imgs/greta_left.webp" alt="Billede af Greta Thunberg vinyl" class="desktop_greta" />
+  <img src="../img/sustainability_imgs/greta_top.webp" alt="Billede af Greta Thunberg vinyl" class="mobile_greta" />
+  <div class="text_wrapper">
+    <section class="text_section">
+      <h2>CIRCULAR SUSTAINABLE PRODUCTION</h2>
+      <p>Our circular production model follows three core principles: minimum waste, efficiency and quality. Therefore, we recycle 98% of plastic waste in production. Our water management system diminishes wastage and environmental impacts while re-using water continuously in record production.</p>
+      <p>The modern automatic thermo-molding press is energy efficient and faster compared to old presses. That allows consistent quality from the first to the last record, using less energy in less time.</p>
+      <p>We value skills and experience on the manufacturing floor. Thus, our production team is mindful of sustainability and operates at 95% success rate, minimum waste or re-work.</p>
+    </section>
 
-  <section class="text_section">
-    <h2>SUSTAINABLE PRODUCTION WORKFLOW</h2>
-    <div>
-      <ul>
-        <li>Automatization and high efficiency</li>
-        <li>Smart, innovative technology</li>
-        <li>Recycling and minimum waste</li>
-      </ul>
-      <ul>
-        <li>Energy conservation</li>
-        <li>Experienced workforce</li>
-        <li>Continuous Learning</li>
-      </ul>
-    </div>
-  </section>
+    <section class="text_section">
+      <h2>SUSTAINABLE PRODUCTION WORKFLOW</h2>
+      <div>
+        <ul>
+          <li>Automatization and high efficiency</li>
+          <li>Smart, innovative technology</li>
+          <li>Recycling and minimum waste</li>
+        </ul>
+        <ul>
+          <li>Energy conservation</li>
+          <li>Experienced workforce</li>
+          <li>Continuous Learning</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <img src="../img/sustainability_imgs/greta_right.webp" alt="Billede af Greta Thunberg vinyl" class="desktop_greta" />
+  <img src="../img/sustainability_imgs/greta_bottom.webp" alt="Billede af Greta Thunberg vinyl" class="mobile_greta" />
 </div>
 
 <style>
@@ -34,13 +40,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 16px;
     box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 1);
+  }
+
+  .desktop_greta {
+    display: none;
+  }
+
+  .text_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
   .text_section {
     background: var(--secondary-color);
     color: var(--primary-color);
     padding: 20px;
-    margin: 30px 0;
     border: 4px solid black;
     border-radius: 5px;
     box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 1);
@@ -65,16 +81,32 @@
 
   @media (min-width: 768px) {
     .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      padding: 160px 80px;
+    }
+
+    .text_wrapper {
+      gap: 32px;
+    }
+
+    .desktop_greta {
+      display: block;
+    }
+
+    .mobile_greta {
+      display: none;
     }
 
     .text_section {
-      width: 40%;
+      width: 100%;
       padding: 30px;
-      font-size: 25px;
+      font-size:;
     }
     .text_section h2 {
       text-align: center;
-      margin: 50px 0;
+      margin: 0;
+      padding-bottom: 16px;
     }
     .text_section div {
       display: flex;

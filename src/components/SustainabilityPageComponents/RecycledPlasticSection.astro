@@ -3,7 +3,7 @@
 ---
 
 <div>
-  <p>100% RECYCLED PLASTIC</p>
+  <h1>100% RECYCLED PLASTIC</h1>
 </div>
 <style>
   .link-card {
@@ -11,12 +11,12 @@
 
   /* Der er sat width på her så word-break kan skille sætningen ad i tre ord på tre linjer */
   /* word-break virker kun hvis sætningen er har længere width end den container den er i */
-  p {
+  h1 {
     width: auto;
     line-height: 1.5;
     word-break: normal;
     padding: 0 20px;
-    font-size: 44px;
+    font-size: clamp(40px, 6vw, 96px);
     color: var(--secondary-color);
   }
 
@@ -28,7 +28,8 @@
     height: 30vh;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
+    text-align: center;
     margin: 100px 0;
   }
 
