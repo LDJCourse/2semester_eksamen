@@ -10,6 +10,7 @@ import TextareaField from "../components/GetAQuotePageComponents/TextareaField.a
 import FormSection from "../components/GetAQuotePageComponents/FormSection.astro";
 import NavigationMenu from "../components/NavigationMenu.astro";
 import MobileNav from "../components/MobileNav.astro";
+import Footer from "../components/Footer.astro";
 
 // Skriv javascript her
 ---
@@ -25,49 +26,19 @@ import MobileNav from "../components/MobileNav.astro";
 
       <!-- <PickAFormat /> -->
       <p>
-        <span>
-          Fill out the form below to request a quote. We look forward to</span
-        > process your request and will contact you shortly.
+        <span> Fill out the form below to request a quote. We look forward to</span> process your request and will contact you shortly.
       </p>
       <div class="product_choice_container">
-        <ProductChoice
-          title="Pick a format:"
-          value1="7'' Single"
-          value2="10'' Single"
-          value3="12'' Double LP"
-          value4="12'' EP/LP"
-        />
+        <ProductChoice title="Pick a format:" value1="7'' Single" value2="10'' Single" value3="12'' Double LP" value4="12'' EP/LP" />
         <PickQuantity />
 
-        <ProductChoice
-          title="Artwork:"
-          question="What are your plans for artwork printing?"
-          value1="Full color"
-          value2="Monochrome / Black & White"
-          value3="Gatefold"
-          value4="Other"
-        />
+        <ProductChoice title="Artwork:" question="What are your plans for artwork printing?" value1="Full color" value2="Monochrome / Black & White" value3="Gatefold" value4="Other" />
 
-        <ProductChoice
-          title="Record weight:"
-          question="How heave would you like your records?"
-          value1="140 gram"
-          value2="180 gram"
-        />
+        <ProductChoice title="Record weight:" question="How heave would you like your records?" value1="140 gram" value2="180 gram" />
 
-        <ProductChoice
-          title="Vinyl Color:"
-          question="Would you like your records in black or color?"
-          value1="Black"
-          value2="Color"
-        />
+        <ProductChoice title="Vinyl Color:" question="Would you like your records in black or color?" value1="Black" value2="Color" />
 
-        <ProductChoice
-          title="Delivery Time:"
-          question="Are you in a hurry? We may be able to help you out."
-          value1="Regular - Records are ready within 2 1/2 months"
-          value2="Express - Records are ready within 45 days"
-        />
+        <ProductChoice title="Delivery Time:" question="Are you in a hurry? We may be able to help you out." value1="Regular - Records are ready within 2 1/2 months" value2="Express - Records are ready within 45 days" />
       </div>
 
       <h2>Contact Information</h2>
@@ -79,7 +50,7 @@ import MobileNav from "../components/MobileNav.astro";
 
 <style>
   .container {
-    background-image: url("/getaquotebg.png");
+    background-image: url("../getaquotebg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     object-fit: cover;
@@ -91,7 +62,7 @@ import MobileNav from "../components/MobileNav.astro";
   }
 
   .getaquote_container {
-    background-image: url("/getaquotebg.png");
+    background-image: url("../getaquotebg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     object-fit: cover;

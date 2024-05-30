@@ -26,7 +26,6 @@ import Footer from "../components/Footer.astro";
         <SidebarLink linkId="linkTwo" pTekst="Producing For Vinyl" imgNavn="../ikoner/vinylplade_ikon.svg" altTekst="Billede af vinyl ikon" />
         <SidebarLink linkId="linkThree" pTekst="Audio Master & Cue Sheet" imgNavn="../ikoner/vinylplade_ikon.svg" altTekst="Billede af vinyl ikon" />
         <SidebarLink linkId="linkFour" pTekst="Mastertemplates & Stampers" imgNavn="../ikoner/vinylplade_ikon.svg" altTekst="Billede af vinyl ikon" />
-        <SidebarLink linkId="linkFive" pTekst="Singles & Albums" imgNavn="../ikoner/vinylplade_ikon.svg" altTekst="Billede af vinyl ikon" />
       </SideBar>
 
       <div class="section_container">
@@ -117,6 +116,10 @@ import Footer from "../components/Footer.astro";
 
   .sideLink:active {
     font-weight: 700;
+  }
+
+  .sectionTop p {
+    max-width: 730px;
   }
 
   @media (max-width: 768px) {
