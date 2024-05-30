@@ -3,27 +3,37 @@
 ---
 
 <div class="container">
-  <section class="text_section reveal delay1">
-    <h2>Traits of responsible value chain</h2>
-    <ul>
-      <li>Safe management of hazardous waste</li>
-      <li>Green energy infrastructure</li>
-      <li>Zero emission logistics</li>
-      <li>Continuous investment in sustainability</li>
-      <li>Carbon neutral operation</li>
-    </ul>
+  <section class="section1 reveal delay1">
+    <img src="../img/sustainability_imgs/valuechain_tall.webp" alt="Billede af hænder der sorterer Greta Thunberg vinyler" />
+    <div class="tekst_wrapper text_section">
+      <h2>Traits of responsible value chain</h2>
+      <ul>
+        <li>Safe management of hazardous waste</li>
+        <li>Green energy infrastructure</li>
+        <li>Zero emission logistics</li>
+        <li>Continuous investment in sustainability</li>
+        <li>Carbon neutral operation</li>
+      </ul>
+    </div>
   </section>
-  <section class="text_section reveal delay2">
-    <h2>CARBON NEUTRAL MODERN VALUE CHAIN</h2>
-    <p>We take pride in working with responsible suppliers that take an extra step towards the sustainable future. A continual development in energy conservation, recycling and water management is the core strategy of RPM's supply chain. Our paper production operates 100% carbon neutral. The research and development in sustainable paper making allow our customers to enjoy high quality artwork on wood-free or recycled paper. Furthermore, Danish green energy infrastructure makes it possible to produce premium quality records entirely on wind power.</p>
-  </section>
-  <section class="text_section reveal delay3">
-    <h2>SUSTAINABLE ELECTROPLATING</h2>
-    <p>The modern electroplating facility ensures safe management of hazardous waste. This is crucial as industrial wastewater contains toxic elements that are harmful and must be appropriately removed. We are sensitive to the carbon footprint of logistics and transportation. Thus, our road freight is zero emissions, driven by electric vehicles in the Nordic region and EU.</p>
+  <section class="section2 reveal delay2">
+    <div class="tekst_wrapper text_section">
+      <h2>CARBON NEUTRAL MODERN VALUE CHAIN</h2>
+      <p>We take pride in working with responsible suppliers that take an extra step towards the sustainable future. A continual development in energy conservation, recycling and water management is the core strategy of RPM's supply chain. Our paper production operates 100% carbon neutral. The research and development in sustainable paper making allow our customers to enjoy high quality artwork on wood-free or recycled paper. Furthermore, Danish green energy infrastructure makes it possible to produce premium quality records entirely on wind power.</p>
+    </div>
+    <img src="../img/sustainability_imgs/valuechain_short.webp" alt="Billede af vinyltrykker maskine" class="" />
+    <div class="tekst_wrapper text_section">
+      <h2>SUSTAINABLE ELECTROPLATING</h2>
+      <p>The modern electroplating facility ensures safe management of hazardous waste. This is crucial as industrial wastewater contains toxic elements that are harmful and must be appropriately removed.</p>
+      <p>We are sensitive to the carbon footprint of logistics and transportation. Thus, our road freight is zero emissions, driven by electric vehicles in the Nordic region and EU.</p>
+    </div>
   </section>
 </div>
 <style>
   .container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     background-image: url("../img/backgrounds/rpm_grey_bg.webp");
     padding: 20px;
   }
@@ -34,18 +44,34 @@
     border: 3px solid var(--primary-color);
     box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 1);
     padding: 20px;
-    margin: 40px 0;
     font-size: 25px;
+  }
+
+  .section1,
+  .section2 {
+    display: grid;
+    gap: 16px;
   }
 
   @media (min-width: 768px) {
     .container {
-      display: flex;
-      justify-content: space-around;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 80px 160px;
+      gap: 16px;
+    }
+
+    .section1 {
+      place-self: center;
+    }
+
+    .section2 {
+      grid-template-rows: 2fr 1fr 2fr;
     }
 
     .text_section {
-      width: 400px;
+      width: 100%;
+      height: fit-content;
     }
   }
 </style>
