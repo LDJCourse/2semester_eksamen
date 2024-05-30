@@ -9,10 +9,19 @@ interface Props {
 const { href, tekst, farve, tekstFarve, hoverFarve } = Astro.props;
 ---
 
-<a class=`button_wrapper stroke dropShadow ${farve} ${hoverFarve}` id="buttonId" href={href}>
+<a
+  class=`button_wrapper stroke dropShadow ${farve} ${hoverFarve}`
+  id="buttonId"
+  href={href}
+>
   <button class=`quote-button ${tekstFarve}`>{tekst}</button>
 </a>
-<img src="/arrow-right.svg" alt="Billede af pil til højre" class="button-icon hide" id="arrow_icon" />
+<img
+  src="/arrow-right.svg"
+  alt="Billede af pil til højre"
+  class="button-icon hide"
+  id="arrow_icon"
+/>
 
 <!--
 <div
@@ -70,7 +79,7 @@ const { href, tekst, farve, tekstFarve, hoverFarve } = Astro.props;
   }
 
   .sort:hover {
-    background-color: #0a0a0a;
+    background-color: #3d3c3c;
     transition: 0.3s ease-in-out all;
   }
 
