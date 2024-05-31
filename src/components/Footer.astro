@@ -7,11 +7,7 @@ import FooterIkon from "./ReusableComponents/FooterIkon.astro";
 <footer>
   <div class="footer_container">
     <div class="footer_info">
-      <a
-        target="_blank"
-        href="https://www.google.com/maps/place/Priorparken+510,+2605+Br%C3%B8ndby/@55.6601747,12.4172789,17z/data=!3m1!4b1!4m6!3m5!1s0x465256d38544fd27:0x347f35076506bfbc!8m2!3d55.6601717!4d12.4198538!16s%2Fg%2F11c5nbk3w9?entry=ttu"
-        class="infobox1"
-      >
+      <a target="_blank" href="https://www.google.com/maps/place/Priorparken+510,+2605+Br%C3%B8ndby/@55.6601747,12.4172789,17z/data=!3m1!4b1!4m6!3m5!1s0x465256d38544fd27:0x347f35076506bfbc!8m2!3d55.6601717!4d12.4198538!16s%2Fg%2F11c5nbk3w9?entry=ttu" class="infobox1">
         <p>Priorparken 510</p>
         <p>2605 Brøndby</p>
         <p>Danmark</p>
@@ -28,27 +24,11 @@ import FooterIkon from "./ReusableComponents/FooterIkon.astro";
         <img src="/rpm_logo.svg" alt="RPM records logo" class="rpm_logo" />
       </a>
       <div class="icon_wrapper">
-        <FooterIkon
-          source="/youtubeIkon.svg"
-          altTekst="YouTube ikon"
-          href="https://www.youtube.com/@rpmrecords3593"
-        />
-        <FooterIkon
-          source="/facebookIkon.svg"
-          altTekst="Facebook ikon"
-          href="https://www.facebook.com/rpmrecords.dk/"
-        />
+        <FooterIkon source="/youtubeIkon.svg" altTekst="YouTube ikon" href="https://www.youtube.com/@rpmrecords3593" />
+        <FooterIkon source="/facebookIkon.svg" altTekst="Facebook ikon" href="https://www.facebook.com/rpmrecords.dk/" />
         <FooterIkon source="/twitterIkon.svg" altTekst="Twitter ikon" href="" />
-        <FooterIkon
-          source="/instagram.svg"
-          altTekst="Instagram ikon"
-          href="https://www.instagram.com/rpmrec/"
-        />
-        <FooterIkon
-          source="/linkedInIkon.svg"
-          altTekst="LinkedIn ikon"
-          href="https://www.linkedin.com/company/rpm-records-dk/?originalSubdomain=dk"
-        />
+        <FooterIkon source="/instagram.svg" altTekst="Instagram ikon" href="https://www.instagram.com/rpmrec/" />
+        <FooterIkon source="/linkedInIkon.svg" altTekst="LinkedIn ikon" href="https://www.linkedin.com/company/rpm-records-dk/?originalSubdomain=dk" />
       </div>
       <p class="accent_color">FIND US ON OUR SOCIALS</p>
     </div>
@@ -108,7 +88,7 @@ import FooterIkon from "./ReusableComponents/FooterIkon.astro";
   }
 
   .rpm_logo {
-    width: 90%;
+    width: 100%;
     max-width: 344px;
     height: auto;
     max-height: 271px;
@@ -190,7 +170,19 @@ import FooterIkon from "./ReusableComponents/FooterIkon.astro";
     .links {
       justify-content: center;
       align-items: center;
-      gap: 12px;
+      gap: 24px;
+    }
+
+    .links_wrapper {
+      gap: 80px;
+    }
+
+    .links a {
+      font-size: 20px;
+    }
+
+    .footer_button_container p {
+      text-align: center;
     }
   }
 </style>
