@@ -145,6 +145,7 @@ import Footer from "../components/Footer.astro";
   const linkThreeSidebar = document.querySelector("#linkThree");
   const linkFourSidebar = document.querySelector("#linkFour");
 
+  // Her tilføjes eventlisteners der lytter efter kliks
   window.addEventListener("load", sidenVises);
   function sidenVises() {
     linkOneSidebar.addEventListener("click", scrollToOne, false);
