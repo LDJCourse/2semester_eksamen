@@ -1,5 +1,5 @@
 ---
-
+import Knap from "../ReusableComponents/KnapPrimary.astro";
 ---
 
 <section class="text_wrapper">
@@ -7,7 +7,8 @@
     <h1>RPM RECORDS</h1>
     <div class="h2div">
       <h2>SCANDINAVIAN SUSTAINABILITY</h2>
-      <h2>PRESSED WITH PASSION</h2>
+      <h2 id="landingH2">PRESSED WITH PASSION</h2>
+      <Knap tekst="Read More" farve="roed" tekstFarve="sortTekst" href="/sustainability" />
     </div>
   </div>
 </section>
@@ -37,6 +38,10 @@
     justify-content: center;
   }
 
+  #landingH2 {
+    margin-bottom: 24px;
+  }
+
   @media (min-width: 768px) {
     .text_wrapper {
       height: calc(100vh - 80px);
@@ -52,7 +57,7 @@
       text-align: left;
       height: auto;
       width: 100%;
-      padding: 0;
+      padding: 0 0 80px 40px;
     }
   }
 </style>
